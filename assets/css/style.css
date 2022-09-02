@@ -28,6 +28,7 @@ body {
     border-radius: 50%;
     position: absolute;
     z-index: -1;
+    overflow-x: hidden;
     transform: translate(80%, -10%); }
   .bubbles .pinkBubble {
     background-color: #FAB8C4;
@@ -67,9 +68,6 @@ body {
   .scrollUpButton:hover {
     background-color: #fd723b;
     transform: translateY(-5px); }
-
-.navbarTransparent {
-  background-color: white; }
 
 header {
   height: 100px;
@@ -235,40 +233,60 @@ header {
     position: relative; }
     header .burgerMenu i {
       font-size: 50px;
-      transition: .3s color; }
+      transition: .3s;
+      color: #3080E3; }
       header .burgerMenu i:hover {
-        color: #3080E3; }
-  header .navListBurger {
+        color: #fd723b; }
+  header ul.navListBurger {
     position: absolute;
-    top: 120px;
-    height: 300px;
+    top: 100px;
     width: 90%;
-    list-style: none;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px -10px gray;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly; }
-    header .navListBurger li {
-      width: 100%;
-      transition: .3s; }
-      header .navListBurger li:hover a {
-        color: #3080E3; }
-        header .navListBurger li:hover a i {
-          color: #3080E3; }
-      header .navListBurger li ul {
-        display: none; }
-      header .navListBurger li a {
+    padding: 0; }
+    header ul.navListBurger div.accordion {
+      box-shadow: 0px 0px 20px -5px gray;
+      border-radius: 20px; }
+      header ul.navListBurger div.accordion div.nonCollapsBurgerNav {
+        height: 52px;
         display: flex;
-        color: black;
-        font-weight: 500;
-        text-decoration: none;
-        width: 100%;
-        justify-content: space-between; }
-        header .navListBurger li a i {
-          margin-right: 20px; }
+        align-items: center; }
+        header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 {
+          padding: 19px; }
+          header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a {
+            transition: .3s color;
+            text-decoration: none;
+            color: black; }
+            header ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a:hover {
+              color: #3080E3; }
+      header ul.navListBurger div.accordion .accordion-button:not(.collapsed) {
+        background-color: white; }
+      header ul.navListBurger div.accordion div.accordion-item:first-of-type .accordion-button {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important; }
+      header ul.navListBurger div.accordion div.accordion-item:last-of-type .accordion-button {
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important; }
+      header ul.navListBurger div.accordion div.accordion-item:last-of-type {
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important; }
+      header ul.navListBurger div.accordion div.accordion-item.nonCollapsBurgerNav {
+        border-radius: 0px !important; }
+      header ul.navListBurger div.accordion div.accordion-item {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        border: none; }
+        header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button {
+          font-weight: 500;
+          transition: .3s color; }
+          header ul.navListBurger div.accordion div.accordion-item h2.accordion-header button:hover {
+            color: #3080E3; }
+        header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul {
+          list-style: none; }
+          header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a {
+            transition: .3s color;
+            text-decoration: none;
+            color: gray; }
+            header ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a:hover {
+              color: #3080E3; }
 
 @media only screen and (max-width: 996px) {
   .bubbles {
@@ -317,3 +335,21 @@ main .mainSec {
     main .mainSec .mainSecImage img {
       border-radius: 30px;
       box-shadow: 0px 0px 20px -10px #adadad; }
+
+@media only screen and (max-width: 996px) {
+  main .mainSec {
+    flex-direction: column; }
+    main .mainSec .mainDescriptionSec {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      main .mainSec .mainDescriptionSec .mainDescTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        main .mainSec .mainDescriptionSec .mainDescTitle span {
+          font-size: 28px; }
+    main .mainSec .mainSecImage {
+      width: 100%; }
+      main .mainSec .mainSecImage img {
+        width: 100%; } }

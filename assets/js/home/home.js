@@ -1,4 +1,4 @@
-
+//Hi my home.js file 
 
 //Scroll Navbar and buttons Functions start
 window.onscroll = function() {scrollFunction()};
@@ -21,11 +21,9 @@ function scrollFunction() {
     document.querySelector(".signInButton").style.color = "white"
     $(".signUpButton").hover(function(){
         $(this).css({background: "#fd723b", color: "white"});
-        // console.log("mouseover");
     },
     function(){
         $(this).css({background: "white", color: "black"});
-        // console.log("mouse out");
     });
     
   }
@@ -33,7 +31,12 @@ function scrollFunction() {
 //Scroll Navbar and buttons Functions end
 
 //Burger Menu start
-$('.clickBurger').click(function (){
-
-})
+$("ul.navListBurger").fadeOut(0.1);
+$('.clickBurger').click(function () {
+  $("ul.navListBurger").fadeToggle(100);
+});
 //Burger Menu end
+
+
+
+

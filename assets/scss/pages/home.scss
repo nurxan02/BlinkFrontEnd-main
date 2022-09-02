@@ -17,6 +17,7 @@
         border-radius: 50%;
         position: absolute;
         z-index: -1;
+        overflow-x:hidden ;
         transform: translate(80%,-10%);
 
     }
@@ -66,9 +67,6 @@
         background-color: $primary-orange;
         transform: translateY(-5px);
     }
-}
-.navbarTransparent{
-    background-color: white;
 }
 header{
     height: 100px;
@@ -298,60 +296,107 @@ header{
         position: relative;
         i{
             font-size: 50px;
-            transition: .3s color;
+            transition: .3s;
+            color: $primary-blue;
+            
             &:hover{
-                color: $primary-blue;
+                color: $primary-orange;
             }
         }
 
        
 
     }
-    .navListBurger{
+    ul.navListBurger{
             position: absolute;
-            top: 120px;
-            height: 300px;
+            top: 100px;
             width: 90%;
-            list-style: none;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 30px -10px gray;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-evenly;
-            li{
-                width: 100%;
-                transition: .3s;
-                &:hover{
-                    a{
-                        color: $primary-blue;
-                        i{
-                            color: $primary-blue;
+            padding: 0;
+            div.accordion{
+                box-shadow:0px 0px 20px -5px gray ;
+                border-radius: 20px ;
+
+                div.nonCollapsBurgerNav{
+                    height: 52px;
+                    display: flex;
+                    align-items: center;
+                    h6{
+                        padding: 19px;
+                        a{
+                            transition: .3s color;
+                            &:hover{
+                                color: $primary-blue;
+                            }
+                            text-decoration: none;
+                            color: black;
                         }
                     }
                 }
-
-                ul{
-                    display: none;
+                .accordion-button:not(.collapsed){
+                    background-color: white;
                 }
-                a{
-                    display: flex;
-                    color: black;
-                    font-weight: 500;
-                    text-decoration: none;
-                    width: 100%;
-                    justify-content: space-between;
-                    i{
-                        margin-right: 20px;
+                div.accordion-item:first-of-type .accordion-button{
+
+                    border-top-left-radius: 20px !important;
+                    border-top-right-radius: 20px !important;
+                }
+                div.accordion-item:last-of-type .accordion-button{
+
+                    border-bottom-left-radius: 20px !important;
+                    border-bottom-right-radius: 20px !important;
+                }
+
+                div.accordion-item:last-of-type{
+                    border-bottom-left-radius: 20px !important;
+                    border-bottom-right-radius: 20px !important;
+                }
+
+                div.accordion-item.nonCollapsBurgerNav{
+                    border-radius: 0px !important;
+                }
+                div.accordion-item{
+                    border-top-left-radius: 20px !important;
+                    border-top-right-radius: 20px !important;
+                   
+                    border: none;
+                    h2.accordion-header{
+                        button{
+                            font-weight: 500 ;
+                            transition: .3s color;
+                            &:hover{
+                                color: $primary-blue;
+
+                            }
+                        }
                     }
+                    div.accordion-body{
+
+                        ul{
+                            list-style: none;
+                            li{
+                                a{
+                                    transition: .3s color;
+                                    text-decoration: none;
+                                    color: gray;
+                                    &:hover{
+                                        
+                                            color: $primary-blue;
+                                        
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    
                 }
-
-
+                
             }
     }
 
 }
+//header BreakPoint Responsive start
 @include breakPoint(996px){
     .bubbles{
         display: none;
@@ -366,10 +411,13 @@ header{
         .burgerMenu{
             display: block;
         }
+
     }
 
 
 }
+//header BreakPoint Responsive end
+
 main{
     .mainSec{
         display: flex;
@@ -421,4 +469,47 @@ main{
             }
         }
     }
+//main section BreakPoint Responsive start
+    @include breakPoint(996px){
+        .mainSec{
+            flex-direction: column;
+            .mainDescriptionSec{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .mainDescTitle{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    span:last-child{
+                        
+                    }
+
+                    span{
+                        font-size: 28px;
+                    }
+                }
+                .freeTrial{
+
+                }
+
+            }
+            .mainSecImage{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+
+        }
+
+    }
+//main section BreakPoint Responsive end
+
+    .serviceWeProvide{
+        
+    }
+
+
+
 }
