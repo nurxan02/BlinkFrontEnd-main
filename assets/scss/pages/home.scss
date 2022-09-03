@@ -11,6 +11,7 @@
         transform: translate(-50%,-50%);
     }
     .blueBubble{
+        display: none;
         width: 1000px;
         height: 1000px;
         background-color: $primary-blue;
@@ -43,8 +44,9 @@
     .pinkBubble.pink2{
         height: 150px;
         width: 150px;
-        bottom: -200px;
+        bottom: -220px;
         left: 700px;
+        z-index: 2;
     }
 
 }
@@ -60,6 +62,7 @@
     background-color: $primary-blue;
     transition: .3s;
     border: none;
+    z-index: 999;
     i{
         color: white;
     }
@@ -76,6 +79,7 @@ header{
     padding: 0px 5% 0px 5% ;
     background-color: transparent;
     position: sticky ;
+    z-index: 3;
     top: 0;
     transition: .3s;
 
@@ -105,6 +109,7 @@ header{
             margin: 0;
             width: 100%;
             height: 100%;
+            margin-left: 21%;
             li.home{
                 position: relative;
                 ul{
@@ -419,6 +424,9 @@ header{
 //header BreakPoint Responsive end
 
 main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .mainSec{
         display: flex;
         height: 100vh;
@@ -431,10 +439,18 @@ main{
             justify-content: space-around;
             .mainDescTitle{
                 width: 90%;
-                span{
+                p{
                     font-family: $poppins-font;
                     font-weight: 700;
                     font-size: 40px;
+                    margin-bottom: -2px;
+                }
+                .complex{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    width: 90%;
+                    
                 }
                 .fourth{
                     color: $primary-orange;
@@ -481,16 +497,18 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    span:last-child{
-                        
+                    .complex{
+                        width: 95%;
                     }
-
-                    span{
+                    p{
                         font-size: 28px;
                     }
                 }
                 .freeTrial{
 
+                }
+                .mainDescription{
+                    text-align: center;
                 }
 
             }
@@ -506,9 +524,591 @@ main{
     }
 //main section BreakPoint Responsive end
 
+//service section start
     .serviceWeProvide{
-        
+        height: 100vh;
+        background-color: #f4f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .serviceDescription{
+            display: inherit;
+            flex-direction: column;
+            align-items: center;
+            height: 30%;
+            justify-content: space-around;
+
+            .mainTitleServ{
+                border: 2px solid $primary-blue;
+                border-radius:20px ;
+                width: 200px;
+                height: 35px;
+                display: inherit;
+                justify-content: center;
+                align-items: center;
+                h6{
+                    color: $primary-blue;
+                    margin: 0;
+
+                }
+            }
+            .title{
+                width: 40%;
+                h2{
+                    text-align: center;
+                    font-weight: 700;
+                }
+
+            }
+            .descriptionServ{
+                width: 80%;
+                p{
+                    text-align: center;
+                    color: gray;
+                }
+            }
+
+        }
+        .cards{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            height: 50%;
+            .cardElements{
+                width: 30%;
+                height: 90%;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0px 0px 20px -14px gray;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 30px;
+                .cardLogo{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 13px;
+                    display: inherit;
+                    justify-content: center;
+                    align-items: center;
+                    i{
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+                .cardLogo.cardMix{
+                    background-color: $primary-blue;
+                    box-shadow: 0px 4px 20px -5px $primary-blue;
+                }
+                .cardLogo.cardHeart{
+                    background-color: $primary-orange;
+                    box-shadow: 0px 4px 20px -5px $primary-orange;
+
+                }
+                .cardLogo.cardFinger{
+                    background-color: $primary-yellow;
+                    box-shadow: 0px 4px 20px -5px $primary-yellow;
+
+                }
+                h3.cardTitle{
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                }
+                p.cardDesc{
+                    color: gray;
+                    font-family: 'Roboto';
+                    font-size: 16px;
+                }
+                a.learnMore{
+                    text-decoration: none;
+                    transition: .3s transform;
+                    transform: translate(-1%,-1%);
+                    font-size: 15px;
+                    font-weight: 500;
+                    &:hover{
+                        transform: scale(1.1) translateX(5%) ;
+                    }
+                }
+                a.learnMore.cardMix{
+                    color: $primary-blue;
+                }
+                a.learnMore.cardHeart{
+                    color: $primary-orange;
+                }
+                a.learnMore.cardFinger{
+                    color: $primary-yellow;
+                }
+
+
+            }
+        }
+
+
+
+
+
     }
+//service section end
+
+//service section responsive start
+
+    @include breakPoint(996px){
+        .serviceWeProvide{
+            height: 160vh;
+            justify-content: space-evenly;
+            .serviceDescription{
+
+                .title{
+                    width: 70%;
+                }
+            }
+            .cards{
+                flex-direction: column;
+                justify-content: space-evenly;
+                .cardElements{
+                    width: 100%;
+                    height: 40%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+//service section responsive end
+
+//management section start
+    .management{
+
+        @include miniSectionDefault;
+        .managementImage{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        .managementDescriptionSec{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 60%;
+
+            h6.mainTitleMan{
+                color: $primary-blue;
+                font-size: 15px;
+            }
+            h2.titleMan{
+                font-weight: 700;
+                font-size: 35px;
+            }
+            .descriptionMan{
+                p{
+                    color: gray;
+                    font-family: 'roboto';
+                }
+            }
+            .buttonsMan{
+                width: 100%;
+                display: flex;
+                .buttonMan{
+                    width: 50%;
+                    display: inherit;
+                    .logo{
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        background-color:white;
+                        display: inherit;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 20px;
+                        box-shadow: 0px 0px 20px -12px gray;
+                        transition: .3s ;
+                        i{
+                            color: $primary-blue;
+                            font-size: 20px;
+                    transition: .3s;
+
+                        }
+                        &:hover{
+                            background-color: $primary-blue;
+                            i{
+                                color: white;
+                            }
+                        }
+                        
+                    }
+                    .descButton{
+                        width: 70%;
+                        p{
+                            font-family: 'roboto';
+                            color: gray;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+//management section end
+
+//management section responsive start
+    @include breakPoint(996px){
+        .management{
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 110vh;
+            .managementImage{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 90%;
+                }
+            }
+            .managementDescriptionSec{
+                width: 100%;
+                align-items: center;
+                h2.titleMan{
+                    text-align: center;
+                }
+                .descriptionMan{
+                    width: 90%;
+                    p{
+                        text-align: center;
+                    }
+                }
+                .buttonsMan{
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: center;
+                    .buttonMan{
+                        width: 90%;
+                        margin-bottom: 20px;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+//management section reponsive end
+
+//customization section start
+    .customization{
+
+        @include miniSectionDefault(){
+            background-color: #151515;
+            position: relative;
+            z-index: 1;
+            
+        }
+        .customizationDescriptionSec{
+            position: relative;
+            z-index: 2;
+            width: 40%;
+            display: inherit;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 60%;
+            h6.mainTitleCus{
+                color: $primary-blue;
+                font-size: 15px;
+
+            }
+            h2.titleCus{
+                font-weight: 700;
+                font-size: 35px;
+                color: white;
+            }
+            .descriptionCus{
+                p{
+                    color: white;
+                    font-family: 'roboto';
+                }
+            }
+
+            .becomefaster{
+                width: 100%;
+                display: flex;
+                .logo{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    background-color: $primary-blue;
+                    display: inherit;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 20px;
+                    box-shadow: 0px 0px 25px -5px $primary-blue;
+                    transition: .3s;
+                    i{
+                        color: white;
+                        font-size: 23px;
+                        transition: .3s;
+    
+                    }
+                    &:hover{
+                        background-color: white;
+                        box-shadow: 0px 0px 25px -5px white;
+                        i{
+    
+                            color: $primary-blue;
+                        }
+                    }
+                }
+                .logoDesc{
+                    font-family: 'roboto';
+                    h6{
+                        color: white;
+                        font-weight: 400;
+
+                    }
+                    a{
+                        display: inline-block;
+                        color: $primary-blue;
+                        text-decoration: none;
+                        transition: .3s;
+                        &:hover{
+                            transform: scale(1.1) translateX(5%);
+                        }
+                    }
+
+                }
+            }
+        }
+        .custamizationtImage{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        .backLights{
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            height: 90vh;
+            img{
+                position: absolute;
+    
+                height: 100%;
+                width: auto;
+                z-index: -1;
+            }
+            img.blue{
+                left: -12%;
+                top: 10%;
+
+            }
+            img.red{
+                right: 20%;
+                top: 10%;
+            }
+        }
+
+
+
+
+
+
+
+    }
+// customization section end
+
+// customization section responsive start
+
+    @include breakPoint(996px){
+        .customization{
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 110vh;
+            .custamizationtImage{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 90%;
+                }
+            }
+            .customizationDescriptionSec{
+                width: 100%;
+                align-items: center;
+                h2.titleCus{
+                    width: 90%;
+                    text-align: center;
+                }
+                .descriptionCus{
+                    width: 90%;
+                    p{
+                        text-align: center;
+                    }
+                }
+                .becomefaster{
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+        }
+    }
+// customization section responsive end
+
+//pricing section start
+    .pricing{
+        height: 130vh;
+        background-color: #f4f7fa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .pricingDesc{
+            display: inherit;
+            flex-direction: column;
+            align-items: center;
+            height: 30%;
+            justify-content: space-around;
+            .mainTitlePrice{
+                border: 2px solid $primary-blue;
+                border-radius: 20px;
+                width: 200px;
+                height: 35px;
+                display: inherit;
+                justify-content: center;
+                align-items: center;
+                h6{
+                    color: $primary-blue;
+                    margin: 0;
+                }
+
+            }
+            .title{
+                width: 40%;
+                h2{
+                text-align: center;
+                font-weight: 700;
+                }                
+            }
+            .descriptionPrice{
+                width: 80%;
+                p{
+                    text-align: center;
+                    color: gray;
+                }
+            }
+        }
+        .pricingCards{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            height: 50%;
+
+            .pricingCard{
+                width: 30%;
+                height: 90%;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0px 0px 20px -14px gray;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 40px;
+                align-items: center;
+
+                .cardTitle{
+                    border: 2px solid black;
+                    border-radius: 20px;
+                    width: 120px;
+                    height: 35px;
+                    display: inherit;
+                    justify-content: center;
+                    align-items: center;
+                    h6{
+                        margin: 0;
+                    }
+
+                }
+                .cardDesc{
+                    width: 95%;
+                    p{
+                        color: gray;
+                        text-align: center;
+                        font-size: 13px;
+                    }
+                }
+                .cardPrice{
+                    height: 20%;
+                    span.priceAll{
+                        position: relative;
+                        display: inline-block;
+                        .currency{
+                            display: inline-block;
+                            position: absolute;
+                            top: 8px;
+                            left: -15px;
+                        }
+                        .value{
+                            font-size: 40px;
+                            font-weight: 600;
+                        }
+                        .month{
+                            color: gray;
+                            font-size: 14px;
+                        }
+
+
+
+
+                    }
+                }
+
+
+                
+            }
+            .pricingCard.starterCard{
+                .starterCardTitle{
+                    border-color: $primary-blue;
+                    h6{
+                        color: $primary-blue;
+                    }
+                }
+            }
+            .pricingCard.exclusiveCard{
+                .exclusiveCardTitle{
+                    border-color: $primary-orange;
+                    h6{
+                        color: $primary-orange;
+                    }
+                }
+            }
+            .pricingCard.premiumCard{
+                .premiumCardTitle{
+                    border-color: $primary-yellow;
+                    h6{
+                        color: $primary-yellow;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+//pricing section end
+
 
 
 

@@ -4,3 +4,12 @@
         @content;
     }
 }
+@mixin miniSectionDefault(){
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    @content;
+}
