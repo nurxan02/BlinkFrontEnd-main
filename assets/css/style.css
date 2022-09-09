@@ -65,12 +65,17 @@ body {
   background-color: #3080E3;
   transition: .3s;
   border: none;
-  z-index: 999; }
+  z-index: 9999; }
   .scrollUpButton i {
     color: white; }
   .scrollUpButton:hover {
     background-color: #fd723b;
     transform: translateY(-5px); }
+
+@media only screen and (max-width: 996px) {
+  .scrollUpButton {
+    bottom: 25px;
+    right: 20px; } }
 
 header {
   height: 100px;
@@ -1212,8 +1217,7 @@ footer {
     flex-direction: column;
     padding: 0px 20px 0px 20px;
     align-items: center;
-    height: 100vh;
-    border: 1px solid black; }
+    height: 120vh; }
     footer .footerInfo {
       width: 100%;
       align-items: center; }
@@ -1223,13 +1227,38 @@ footer {
         text-align: center; }
     footer .footerLists {
       height: 100%; }
-      footer .footerLists h5 {
-        text-align: center; }
       footer .footerLists ul {
+        height: 75%;
         padding: 0; }
+        footer .footerLists ul h5 {
+          text-align: center;
+          font-size: 19px;
+          margin-bottom: 30px; }
         footer .footerLists ul div {
           align-items: center;
           height: 100%;
           justify-content: space-between; }
           footer .footerLists ul div li {
-            font-size: 18px; } }
+            font-size: 18px; }
+    footer .subscribe {
+      width: 100%;
+      height: 65%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px; }
+      footer .subscribe form {
+        align-items: center;
+        width: 100%; }
+        footer .subscribe form .subscribeDescs {
+          align-items: center;
+          width: 100%; }
+          footer .subscribe form .subscribeDescs h5 {
+            text-align: center; }
+          footer .subscribe form .subscribeDescs p.subscribeDesc {
+            white-space: normal;
+            text-align: center;
+            width: 100%; }
+        footer .subscribe form label {
+          width: 100%; }
+          footer .subscribe form label input {
+            width: 100%; } }

@@ -69,7 +69,7 @@
     background-color: $primary-blue;
     transition: .3s;
     border: none;
-    z-index: 999;
+    z-index: 9999;
 
 
     i {
@@ -79,6 +79,13 @@
     &:hover {
         background-color: $primary-orange;
         transform: translateY(-5px);
+    }
+}
+@include breakPoint(996px){
+    .scrollUpButton{
+        bottom: 25px;
+        right: 20px;
+
     }
 }
 
@@ -1670,32 +1677,38 @@ main {
                         display: inherit;
                         flex-direction: column;
                         justify-content: space-evenly;
-                        small.cardCategory{
+
+                        small.cardCategory {
                             font-weight: 500;
                             font-size: 13px;
                             font-family: 'roboto';
                             color: $primary-blue;
                         }
-                        h4{
+
+                        h4 {
                             font-size: 18px;
                             font-family: 'roboto';
                             transition: .3s;
                             cursor: pointer;
-                            &:hover{
+
+                            &:hover {
                                 color: $primary-blue;
                             }
                         }
-                        p{
+
+                        p {
                             color: gray;
                             font-size: 14px;
                         }
-                        a.readME{
+
+                        a.readME {
                             text-decoration: none;
                             color: gray;
                             font-weight: 500;
                             font-size: 15px;
                             transition: .3s;
-                            &:hover{
+
+                            &:hover {
                                 color: $primary-blue;
                                 transform: translateX(10px) scale(1.05);
 
@@ -1709,7 +1722,7 @@ main {
             }
         }
 
-        .backgroundGetStarted{
+        .backgroundGetStarted {
             width: 90%;
             height: 20%;
             display: flex;
@@ -1721,17 +1734,18 @@ main {
             position: relative;
             box-shadow: 0px 0px 20px -5px $primary-blue;
 
-            img{
+            img {
                 position: absolute;
                 right: 0;
                 bottom: 0;
                 z-index: 1;
             }
-            h3{
+
+            h3 {
                 color: white;
             }
 
-            .gettingStartedButton{
+            .gettingStartedButton {
 
                 background-color: white;
                 display: flex;
@@ -1743,16 +1757,19 @@ main {
                 height: 50px;
                 cursor: pointer;
                 position: relative;
-                z-index:2 ;
-                a{
+                z-index: 2;
+
+                a {
                     text-decoration: none;
                     font-size: 13px;
                     font-weight: 500;
                     color: black;
                 }
-                &:hover{
+
+                &:hover {
                     background-color: $primary-orange;
-                    a{
+
+                    a {
                         color: white;
                     }
 
@@ -1766,50 +1783,58 @@ main {
 
     //blogs section responsive start 
 
-    @include breakPoint(996px){
+    @include breakPoint(996px) {
         .blogs {
             height: 250vh;
             padding: 0px 10px 0px 10px;
             justify-content: space-around;
 
-            .blogCards{
-                ul.cards{
+            .blogCards {
+                ul.cards {
                     flex-direction: column;
-                    li.blogcards{
+
+                    li.blogcards {
                         width: 100%;
                         margin-bottom: 20px;
-                        
+
                     }
                 }
             }
-            .blogsDesc{
+
+            .blogsDesc {
                 height: 10%;
-                .title{
+
+                .title {
                     width: 80%;
                 }
             }
-            .backgroundGetStarted{
+
+            .backgroundGetStarted {
                 height: 6%;
                 flex-direction: column;
                 z-index: 0;
                 justify-content: center;
-                img{
+
+                img {
                     height: 30%;
                     z-index: 1;
 
                 }
-                h3{
+
+                h3 {
                     font-size: 18px;
                     text-align: center;
                 }
-                .gettingStartedButton{
+
+                .gettingStartedButton {
                     position: relative;
-                    z-index:2 ;
+                    z-index: 2;
                 }
             }
 
         }
     }
+
     //blogs section responsive end
 
 
@@ -1817,191 +1842,262 @@ main {
 
 }
 
-    //footer start 
-    footer{
+//footer start 
+footer {
+    display: flex;
+    width: 100%;
+    height: 45vh;
+    justify-content: space-between;
+    padding: 0px 100px 0px 100px;
+
+    .footerInfo {
         display: flex;
-        width: 100%;
-        height: 45vh;
-        justify-content: space-between;
-        padding: 0px 100px 0px 100px;
-        .footerInfo{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 25%;
+        height: 70%;
+
+        img.logo {
+            height: 35px;
+
+        }
+
+        p.footerDesc {
+            color: gray;
+            font-size: 15px;
+        }
+
+        p.copyRight {
+            color: gray;
+            font-size: 15px;
+
+            a {
+                color: $primary-blue;
+                text-decoration: none;
+                transition: .3s;
+
+                &:hover {
+
+                    color: $primary-orange;
+                }
+            }
+        }
+
+    }
+
+    .footerLists {
+        height: 100%;
+
+        ul {
+            height: 65%;
+            list-style: none;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-start;
-            width: 25%;
-            height: 70%;
-            img.logo{
-                height: 35px;
+            justify-content: space-evenly;
 
+            h5 {
+                font-size: 18px;
+                font-weight: 600;
             }
-            p.footerDesc{
-                color: gray;
-                font-size: 15px;
-            }
-            p.copyRight{
-                color: gray;
-                font-size: 15px;
-                a{
-                    color: $primary-blue;
-                    text-decoration: none;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                height: 80%;
+                justify-content: space-evenly;
+
+                li {
+                    color: gray;
+                    font-size: 15px;
+                    font-family: 'roboto';
                     transition: .3s;
-                    &:hover{
+                    cursor: pointer;
 
-                        color: $primary-orange;
+                    &:hover {
+                        color: $primary-blue;
                     }
                 }
             }
-
         }
-        .footerLists{
-            height: 100%;
-            ul{
-                height: 65%;
-                list-style: none;
+    }
+
+    .subscribe {
+        width: 30%;
+        height: 65%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 5px;
+            height: 80%;
+            justify-content: space-between;
+            width: 80%;
+
+            .subscribeDescs {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly ;
-                h5{
+                justify-content: space-between;
+                height: 50%;
+
+                h5 {
                     font-size: 18px;
                     font-weight: 600;
+
                 }
 
-                div{
-                    display: flex;
-                    flex-direction: column;
-                    height: 80%;
-                    justify-content: space-evenly;
-                    li{
-                        color: gray;
-                        font-size: 15px;
-                        font-family: 'roboto';
-                        transition: .3s;
-                        cursor: pointer;
-                        &:hover{
-                            color: $primary-blue;
-                        }
-                    }
+                p {
+                    color: gray;
+                    font-size: 14px;
+                    white-space: nowrap;
                 }
             }
-        }
-        .subscribe{
-            width: 30%;
-            height: 65%;
-            form{
-                display: flex;
-                flex-direction: column;
+
+            label {
                 position: relative;
-                margin-top: 5px;
-                height: 80%;
-                justify-content: space-between;
-                width: 80%;
-                .subscribeDescs{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: 50%;
-                    h5{
-                        font-size: 18px;
-                        font-weight: 600;
-    
+
+                input {
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 10px;
+                    border-color: rgb(226, 226, 226);
+                    border-style: solid;
+                    border-width: 1px;
+                    padding-left: 20px;
+                    transition: .3s;
+
+                    &:focus-visible {
+                        border-width: 1px !important;
+                        border-color: $primary-blue !important;
+
                     }
-                    p{
-                        color: gray;
-                        font-size: 14px;
-                        white-space: nowrap;
+
+                    &:focus {
+                        border: none;
+                        border-color: $primary-blue;
+
+                    }
+
+                    &:hover {
+                        border-color: $primary-blue;
                     }
                 }
 
-                label{
-                    position: relative;
-                    input{
-                        width: 100%;
-                        height: 60px;
-                        border-radius: 10px;
-                        border-color: rgb(226, 226, 226);
-                        border-style: solid;
-                        border-width:1px ;
-                        padding-left: 20px;
-                        transition: .3s;
-                        &:focus-visible{
-                            border-width: 1px !important;
-                            border-color: $primary-blue !important;
+                button {
+                    position: absolute;
+                    background-color: $primary-blue;
+                    color: white;
+                    height: 50px;
+                    width: 50px;
+                    right: 5px;
+                    top: 5px;
 
-                        }
-                        &:focus{
-                            border: none;
-                            border-color: $primary-blue;
-
-                        }
-                        &:hover{
-                            border-color: $primary-blue;
-                        }
-                    }
-                    button{
-                        position: absolute;
-                        background-color: $primary-blue;
+                    &:hover {
+                        background-color: $primary-orange;
                         color: white;
-                        height: 50px;
-                        width: 50px;
-                        right: 5px;
-                        top: 5px;
-                        &:hover{
-                            background-color: $primary-orange;
-                            color: white;
-                            border-color: $primary-orange;
-                        }
-                        i{
-                            font-size: 18px;
-                        }
+                        border-color: $primary-orange;
+                    }
+
+                    i {
+                        font-size: 18px;
                     }
                 }
-
             }
+
         }
     }
+}
 
-    //footer end
+//footer end
 
-    //footer responsive start
-    @include breakPoint(996px){
-        footer{
-            flex-direction: column;
+//footer responsive start
+@include breakPoint(996px) {
+    footer {
+        flex-direction: column;
         padding: 0px 20px 0px 20px;
         align-items: center;
-        height: 100vh;
+        height: 120vh;
 
-        border: 1px solid black;
-            .footerInfo{
-                width: 100%;
-                align-items: center;
-                p.footerDesc{
-                    text-align: center;
-                }
-                p.copyRight{
-                    text-align: center;
-                }
+
+        .footerInfo {
+            width: 100%;
+            align-items: center;
+
+            p.footerDesc {
+                text-align: center;
             }
-            .footerLists{
-                height: 100%;
-                h5{
+
+            p.copyRight {
+                text-align: center;
+            }
+        }
+
+        .footerLists {
+            height: 100%;
+
+            ul {
+                height: 75%;
+
+                h5 {
                     text-align: center;
+                    font-size: 19px;
+                    margin-bottom: 30px;
                 }
-                ul{
-                    padding: 0;
-                    div{
-                        align-items: center;
-                        li{
-                            font-size: 18px;
-                        }
-                        height: 100%;
-                        justify-content: space-between;
+
+                padding: 0;
+
+                div {
+                    align-items: center;
+
+                    li {
+                        font-size: 18px;
                     }
 
+                    height: 100%;
+                    justify-content: space-between;
+                }
 
-                }                
+
+            }
+        }
+
+        .subscribe {
+            width: 100%;
+            height: 65%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+
+            form {
+                align-items: center;
+                width: 100%;
+
+                .subscribeDescs {
+                    align-items: center;
+                    width: 100%;
+
+                    h5 {
+                        text-align: center;
+                    }
+
+                    p.subscribeDesc {
+                        white-space: normal;
+                        text-align: center;
+                        width: 100%;
+
+                    }
+
+                }
+                label{
+                    width: 100%;
+                    input{
+                        width: 100%;
+                    }
+                }
             }
         }
     }
+}
 
-    //footer responsive end
+//footer responsive end
