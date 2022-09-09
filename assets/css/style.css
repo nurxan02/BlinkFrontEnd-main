@@ -22,7 +22,6 @@ body {
     z-index: -1;
     transform: translate(-50%, -50%); }
   .bubbles .blueBubble {
-    display: none;
     width: 1000px;
     height: 1000px;
     background-color: #3080E3;
@@ -54,12 +53,12 @@ body {
     z-index: 2; }
 
 .scrollUpButton {
+  display: flex;
   position: fixed;
   bottom: 45px;
   right: 40px;
   height: 45px;
   width: 45px;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #3080E3;
@@ -1038,7 +1037,7 @@ main {
                 transform: translateX(10px) scale(1.05); }
     main .blogs .backgroundGetStarted {
       width: 90%;
-      height: 20%;
+      height: 14%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1053,7 +1052,8 @@ main {
         bottom: 0;
         z-index: 1; }
       main .blogs .backgroundGetStarted h3 {
-        color: white; }
+        color: white;
+        font-weight: 700; }
       main .blogs .backgroundGetStarted .gettingStartedButton {
         background-color: white;
         display: flex;
@@ -1090,7 +1090,7 @@ main {
         main .blogs .blogsDesc .title {
           width: 80%; }
       main .blogs .backgroundGetStarted {
-        height: 6%;
+        height: 9%;
         flex-direction: column;
         z-index: 0;
         justify-content: center; }
@@ -1261,4 +1261,561 @@ footer {
         footer .subscribe form label {
           width: 100%; }
           footer .subscribe form label input {
+            width: 100%; } }
+
+.scrollUpButton {
+  display: flex;
+  position: fixed;
+  bottom: 45px;
+  right: 40px;
+  height: 45px;
+  width: 45px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3080E3;
+  transition: .3s;
+  border: none;
+  z-index: 9999; }
+  .scrollUpButton i {
+    color: white; }
+  .scrollUpButton:hover {
+    background-color: #fd723b;
+    transform: translateY(-5px); }
+
+@media only screen and (max-width: 996px) {
+  .scrollUpButton {
+    bottom: 25px;
+    right: 20px; } }
+
+header.helloContact {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5% 0px 5%;
+  background-color: white !important;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  transition: .3s;
+  box-shadow: 0px 20px 30px -40px gray; }
+  header.helloContact .navLogo {
+    height: 100%;
+    width: 10%;
+    display: inherit;
+    align-items: center; }
+    header.helloContact .navLogo img {
+      height: 35%; }
+  header.helloContact nav {
+    display: inherit;
+    align-items: center;
+    width: 30%;
+    height: 100%; }
+    header.helloContact nav .navList {
+      display: inherit;
+      align-items: center;
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      margin-left: 21%; }
+      header.helloContact nav .navList li.home {
+        position: relative; }
+        header.helloContact nav .navList li.home ul {
+          transform: translateY(-20px);
+          opacity: 0;
+          transition: .5s;
+          height: 0;
+          width: 200px;
+          background-color: white;
+          box-shadow: 0px 0px 15px -10px gray;
+          border-radius: 5px;
+          position: absolute;
+          bottom: -100px;
+          left: -40px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden; }
+          header.helloContact nav .navList li.home ul li a {
+            color: gray;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none; }
+            header.helloContact nav .navList li.home ul li a:hover {
+              color: #3080E3; }
+        header.helloContact nav .navList li.home:hover ul {
+          height: 100px;
+          opacity: 100%;
+          transform: translateY(0px); }
+      header.helloContact nav .navList li.Pages {
+        position: relative; }
+        header.helloContact nav .navList li.Pages ul {
+          transform: translateY(-120px);
+          opacity: 0;
+          transition: 0.5s;
+          height: 0px;
+          width: 200px;
+          background-color: white;
+          box-shadow: 0px 0px 15px -10px gray;
+          border-radius: 5px;
+          position: absolute;
+          bottom: -350px;
+          left: -40px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden; }
+          header.helloContact nav .navList li.Pages ul li a {
+            color: gray;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none; }
+            header.helloContact nav .navList li.Pages ul li a:hover {
+              color: #3080E3; }
+        header.helloContact nav .navList li.Pages:hover ul {
+          height: 350px;
+          opacity: 100;
+          transform: translateY(0px); }
+      header.helloContact nav .navList li.Blog {
+        position: relative; }
+        header.helloContact nav .navList li.Blog ul {
+          transform: translateY(-20px);
+          opacity: 0;
+          transition: 0.5s;
+          height: 0;
+          width: 200px;
+          background-color: white;
+          box-shadow: 0px 0px 15px -10px gray;
+          border-radius: 5px;
+          position: absolute;
+          bottom: -100px;
+          left: -40px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden; }
+          header.helloContact nav .navList li.Blog ul li a {
+            color: gray;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none; }
+            header.helloContact nav .navList li.Blog ul li a:hover {
+              color: #3080E3; }
+        header.helloContact nav .navList li.Blog:hover ul {
+          height: 100px;
+          opacity: 100;
+          transform: translateY(0px); }
+      header.helloContact nav .navList li {
+        height: 100%;
+        display: inherit;
+        align-items: center;
+        white-space: nowrap;
+        margin: 0px 10px 0px 10px; }
+        header.helloContact nav .navList li a {
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+          font-size: 15px;
+          transition: .3s color; }
+        header.helloContact nav .navList li:hover a {
+          color: #3080E3; }
+  header.helloContact .loginFormButtons {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center; }
+    header.helloContact .loginFormButtons a {
+      margin: 0px 5px 0px 5px; }
+    header.helloContact .loginFormButtons .signInButton {
+      text-decoration: none;
+      color: black;
+      transition: .3s color;
+      white-space: nowrap; }
+      header.helloContact .loginFormButtons .signInButton:hover {
+        text-decoration: underline; }
+    header.helloContact .loginFormButtons .signUpButton {
+      text-decoration: none;
+      color: white;
+      transition: .3s background-color, .3s color;
+      font-weight: 500;
+      background-color: #3080E3;
+      height: 45px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      white-space: nowrap; }
+      header.helloContact .loginFormButtons .signUpButton:hover {
+        color: white;
+        background-color: #fd723b; }
+  header.helloContact .burgerMenu {
+    display: none;
+    position: relative; }
+    header.helloContact .burgerMenu i {
+      font-size: 50px;
+      transition: .3s;
+      color: #3080E3; }
+      header.helloContact .burgerMenu i:hover {
+        color: #fd723b; }
+  header.helloContact ul.navListBurger {
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    padding: 0; }
+    header.helloContact ul.navListBurger div.accordion {
+      box-shadow: 0px 0px 20px -5px gray;
+      border-radius: 20px; }
+      header.helloContact ul.navListBurger div.accordion div.nonCollapsBurgerNav {
+        height: 52px;
+        display: flex;
+        align-items: center; }
+        header.helloContact ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 {
+          padding: 19px; }
+          header.helloContact ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a {
+            transition: .3s color;
+            text-decoration: none;
+            color: black; }
+            header.helloContact ul.navListBurger div.accordion div.nonCollapsBurgerNav h6 a:hover {
+              color: #3080E3; }
+      header.helloContact ul.navListBurger div.accordion .accordion-button:not(.collapsed) {
+        background-color: white; }
+      header.helloContact ul.navListBurger div.accordion div.accordion-item:first-of-type .accordion-button {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important; }
+      header.helloContact ul.navListBurger div.accordion div.accordion-item:last-of-type .accordion-button {
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important; }
+      header.helloContact ul.navListBurger div.accordion div.accordion-item:last-of-type {
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important; }
+      header.helloContact ul.navListBurger div.accordion div.accordion-item.nonCollapsBurgerNav {
+        border-radius: 0px !important; }
+      header.helloContact ul.navListBurger div.accordion div.accordion-item {
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        border: none; }
+        header.helloContact ul.navListBurger div.accordion div.accordion-item h2.accordion-header button {
+          font-weight: 500;
+          transition: .3s color; }
+          header.helloContact ul.navListBurger div.accordion div.accordion-item h2.accordion-header button:hover {
+            color: #3080E3; }
+        header.helloContact ul.navListBurger div.accordion div.accordion-item div.accordion-body ul {
+          list-style: none; }
+          header.helloContact ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a {
+            transition: .3s color;
+            text-decoration: none;
+            color: gray; }
+            header.helloContact ul.navListBurger div.accordion div.accordion-item div.accordion-body ul li a:hover {
+              color: #3080E3; }
+
+@media only screen and (max-width: 996px) {
+  .bubbles {
+    display: none; }
+  header.helloContact nav {
+    display: none; }
+  header.helloContact .loginFormButtons {
+    display: none; }
+  header.helloContact .burgerMenu {
+    display: block; } }
+
+main.contact .sectionHeaderGradinent {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(-45deg, #fd723b, #3f8dec);
+  padding: 0px 100px 0px 100px;
+  align-items: center;
+  justify-content: space-between; }
+  main.contact .sectionHeaderGradinent h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600; }
+  main.contact .sectionHeaderGradinent .pagination h6 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500; }
+
+@media only screen and (max-width: 996px) {
+  main.contact .sectionHeaderGradinent {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px 0px 40px 0; } }
+
+main.contact .contactForm {
+  display: flex;
+  height: 130vh;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 100px;
+  background-color: #f4f7fa; }
+  main.contact .contactForm form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 20px 40px 20px 40px;
+    height: 95%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 45px -22px gray;
+    background-color: white; }
+    main.contact .contactForm form .inputs {
+      display: flex;
+      flex-direction: column; }
+      main.contact .contactForm form .inputs label {
+        color: gray;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px; }
+      main.contact .contactForm form .inputs input {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        border-color: #e2e2e2;
+        border-style: solid;
+        border-width: 1px;
+        padding-left: 20px;
+        transition: .3s; }
+        main.contact .contactForm form .inputs input:focus-visible {
+          border-width: 1px !important;
+          border-color: #3080E3 !important; }
+        main.contact .contactForm form .inputs input:focus {
+          border: none;
+          border-color: #3080E3; }
+        main.contact .contactForm form .inputs input:hover {
+          border-color: #3080E3; }
+      main.contact .contactForm form .inputs textarea {
+        width: 100%;
+        border-radius: 10px;
+        border-color: #e2e2e2;
+        border-style: solid;
+        border-width: 1px;
+        padding: 20px;
+        transition: .3s;
+        resize: none; }
+        main.contact .contactForm form .inputs textarea:focus-visible {
+          border-width: 1px !important;
+          border-color: #3080E3 !important; }
+        main.contact .contactForm form .inputs textarea:focus {
+          border: none;
+          border-color: #3080E3; }
+        main.contact .contactForm form .inputs textarea:hover {
+          border-color: #3080E3; }
+    main.contact .contactForm form button {
+      width: 100%;
+      height: 60px;
+      border-radius: 10px;
+      background-color: #3080E3;
+      border: none;
+      color: white;
+      transition: .3s; }
+      main.contact .contactForm form button:hover {
+        background-color: #fd723b;
+        box-shadow: 0px 0px 20px -5px #fd723b;
+        transform: scale(1.01); }
+  main.contact .contactForm .contactDesc {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0px 0px 0px; }
+    main.contact .contactForm .contactDesc .contactDescTop {
+      height: 20%;
+      display: inherit;
+      flex-direction: column;
+      justify-content: space-between; }
+      main.contact .contactForm .contactDesc .contactDescTop h2 {
+        font-weight: 700;
+        font-size: 30px;
+        width: 70%; }
+      main.contact .contactForm .contactDesc .contactDescTop p {
+        color: gray;
+        font-size: 15px; }
+    main.contact .contactForm .contactDesc .contactDescBottom {
+      height: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 40px; }
+      main.contact .contactForm .contactDesc .contactDescBottom ul.contactList {
+        list-style: none;
+        padding: 0;
+        display: inherit;
+        flex-direction: column;
+        height: 30%;
+        margin-top: 20px;
+        justify-content: space-around; }
+        main.contact .contactForm .contactDesc .contactDescBottom ul.contactList h5 {
+          font-weight: 600; }
+        main.contact .contactForm .contactDesc .contactDescBottom ul.contactList li {
+          color: gray; }
+
+@media only screen and (max-width: 996px) {
+  main.contact .contactForm {
+    flex-direction: column;
+    padding: 10px;
+    height: 160vh; }
+    main.contact .contactForm form {
+      width: 100%;
+      height: 50%; } }
+
+footer.contactFooter {
+  display: flex;
+  width: 100%;
+  height: 45vh;
+  justify-content: space-between;
+  padding: 100px 100px 0px 100px; }
+  footer.contactFooter .footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 25%;
+    height: 70%; }
+    footer.contactFooter .footerInfo img.logo {
+      height: 35px; }
+    footer.contactFooter .footerInfo p.footerDesc {
+      color: gray;
+      font-size: 15px; }
+    footer.contactFooter .footerInfo p.copyRight {
+      color: gray;
+      font-size: 15px; }
+      footer.contactFooter .footerInfo p.copyRight a {
+        color: #3080E3;
+        text-decoration: none;
+        transition: .3s; }
+        footer.contactFooter .footerInfo p.copyRight a:hover {
+          color: #fd723b; }
+  footer.contactFooter .footerLists {
+    height: 100%; }
+    footer.contactFooter .footerLists ul {
+      height: 65%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      footer.contactFooter .footerLists ul h5 {
+        font-size: 18px;
+        font-weight: 600; }
+      footer.contactFooter .footerLists ul div {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-evenly; }
+        footer.contactFooter .footerLists ul div li {
+          color: gray;
+          font-size: 15px;
+          font-family: 'roboto';
+          transition: .3s;
+          cursor: pointer; }
+          footer.contactFooter .footerLists ul div li:hover {
+            color: #3080E3; }
+  footer.contactFooter .subscribe {
+    width: 30%;
+    height: 65%; }
+    footer.contactFooter .subscribe form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-top: 5px;
+      height: 80%;
+      justify-content: space-between;
+      width: 80%; }
+      footer.contactFooter .subscribe form .subscribeDescs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%; }
+        footer.contactFooter .subscribe form .subscribeDescs h5 {
+          font-size: 18px;
+          font-weight: 600; }
+        footer.contactFooter .subscribe form .subscribeDescs p {
+          color: gray;
+          font-size: 14px;
+          white-space: nowrap; }
+      footer.contactFooter .subscribe form label {
+        position: relative; }
+        footer.contactFooter .subscribe form label input {
+          width: 100%;
+          height: 60px;
+          border-radius: 10px;
+          border-color: #e2e2e2;
+          border-style: solid;
+          border-width: 1px;
+          padding-left: 20px;
+          transition: .3s; }
+          footer.contactFooter .subscribe form label input:focus-visible {
+            border-width: 1px !important;
+            border-color: #3080E3 !important; }
+          footer.contactFooter .subscribe form label input:focus {
+            border: none;
+            border-color: #3080E3; }
+          footer.contactFooter .subscribe form label input:hover {
+            border-color: #3080E3; }
+        footer.contactFooter .subscribe form label button {
+          position: absolute;
+          background-color: #3080E3;
+          color: white;
+          height: 50px;
+          width: 50px;
+          right: 5px;
+          top: 5px; }
+          footer.contactFooter .subscribe form label button:hover {
+            background-color: #fd723b;
+            color: white;
+            border-color: #fd723b; }
+          footer.contactFooter .subscribe form label button i {
+            font-size: 18px; }
+
+@media only screen and (max-width: 996px) {
+  footer.contactFooter {
+    flex-direction: column;
+    padding: 50px 20px 0px 20px;
+    align-items: center;
+    height: 120vh; }
+    footer.contactFooter .footerInfo {
+      width: 100%;
+      align-items: center; }
+      footer.contactFooter .footerInfo p.footerDesc {
+        text-align: center; }
+      footer.contactFooter .footerInfo p.copyRight {
+        text-align: center; }
+    footer.contactFooter .footerLists {
+      height: 100%; }
+      footer.contactFooter .footerLists ul {
+        height: 75%;
+        padding: 0; }
+        footer.contactFooter .footerLists ul h5 {
+          text-align: center;
+          font-size: 19px;
+          margin-bottom: 30px; }
+        footer.contactFooter .footerLists ul div {
+          align-items: center;
+          height: 100%;
+          justify-content: space-between; }
+          footer.contactFooter .footerLists ul div li {
+            font-size: 18px; }
+    footer.contactFooter .subscribe {
+      width: 100%;
+      height: 65%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px; }
+      footer.contactFooter .subscribe form {
+        align-items: center;
+        width: 100%; }
+        footer.contactFooter .subscribe form .subscribeDescs {
+          align-items: center;
+          width: 100%; }
+          footer.contactFooter .subscribe form .subscribeDescs h5 {
+            text-align: center; }
+          footer.contactFooter .subscribe form .subscribeDescs p.subscribeDesc {
+            white-space: normal;
+            text-align: center;
+            width: 100%; }
+        footer.contactFooter .subscribe form label {
+          width: 100%; }
+          footer.contactFooter .subscribe form label input {
             width: 100%; } }

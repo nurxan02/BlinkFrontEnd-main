@@ -46,9 +46,9 @@ function scrollFunction() {
     scrollFunction()
     var scrollUp = document.querySelector(".scrollUpButton");
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        scrollUp.style.display = "flex";
+        scrollUp.style.opacity = "100";
     } else {
-        scrollUp.style.display = "none";
+        scrollUp.style.opacity = "0";
     }
     scrollUp.addEventListener("click", function () {
         window.scrollTo({
