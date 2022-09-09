@@ -623,12 +623,37 @@ main.contact{
     @include breakPoint(996px){
         .contactForm{
             flex-direction: column;
-            padding: 10px;
-            height: 160vh;
+            padding: 30px 10px 30px 10px ;
+            height: 200vh;
+            justify-content: space-evenly;
             form{
                 width: 100%;
                 height: 50%;
-                
+                padding: 30px;
+                button{
+                    margin-top: 20px;
+
+                }
+                .inputs{
+                    label{
+                        margin: 10px 0px 5px 0px;
+                    }
+                }
+
+            }
+            .contactDesc{
+                width: 100%;
+                height: 50%;
+                justify-content: flex-start;
+                margin-top: 40px;
+                .contactDescTop{
+                    height: 30%;
+
+                }
+                .contactDescBottom{
+                    height: 60%;
+
+                }
             }
 
         }
