@@ -1,14 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blink - About Us</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/image/favicon.svg">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./assets/css/owl-carousel-plug/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl-carousel-plug/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
+
 </head>
-<body>  
+
+<body>
+    <div class="scrollUpButton btn btn-outline-primary">
+        <i class="bi bi-chevron-up "></i>
+    </div>
+
+    <header class="helloAbout" style="background-color: white;">
+        <div class="navLogo">
+            <img src="./assets/image/logo.svg" alt="">
+        </div>
+        <nav>
+            <ul class="navList">
+                <li class="navItems home"><a href="./index.html" class="anchorHome">Home</a>
+                    <ul class="subMenu">
+                        <li class="subLi"><a href="./index.html">SaaS Homepage</a></li>
+                        <li class="subLi"><a href="./index.html">SaaS Homepage</a></li>
+                    </ul>
+                </li>
+
+                <li class="navItems Pages"><a href="">Pages</a>
+                    <ul class="subMenu">
+                        <li class="subLi"><a href="./about.html">About Us</a></li>
+                        <li class="subLi"><a href="">Pricing</a></li>
+                        <li class="subLi"><a href="./contact.html">Contact</a></li>
+                        <li class="subLi"><a href="./index.html">Home</a></li>
+                        <li class="subLi"><a href="">Blogs</a></li>
+                        <li class="subLi"><a href="">Maps</a></li>
+                    </ul>
+                </li>
+                <li class="navItems"><a href="">Services</a></li>
+                <li class="navItems Blog"><a href="">Blog</a>
+                    <ul class="subMenu">
+                        <li class="subLi"><a href="">Blog Single</a></li>
+                        <li class="subLi"><a href="">Blog Grid</a></li>
+                    </ul>
+                </li>
+                <li class="navItems"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="loginFormButtons">
+            <a href="./singIn.html" class="signInButton">Sign In</a>
+            <a href="" class="signUpButton">Sign Up</a>
+        </div>
+
+        <div class="burgerMenu">
+            <i class="bi bi-list clickBurger"></i>
+        </div>
+
+        <ul class="navListBurger accordion">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
+                            Home
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href="./index.html">Home page Item</a></li>
+                                <br>
+                                <li><a href="./index.html">Home page Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Pages
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="subMenu">
+                                <li class="subLi"><a href="./about.html">About Us</a></li><br>
+                                <li class="subLi"><a href="">Pricing</a></li><br>
+                                <li class="subLi"><a href="./contact.html">Contact</a></li><br>
+                                <li class="subLi"><a href="./index.html">Home</a></li><br>
+                                <li class="subLi"><a href="">Blogs</a></li><br>
+                                <li class="subLi"><a href="">Maps</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item nonCollapsBurgerNav">
+                    <h6 class="accordion-header">
+                        <a class="" href="./Services.html">
+                            Services
+                        </a>
+                    </h6>
+                </div>
+
+                <div class="accordion-item nonCollapsBurgerNav">
+                    <h6 class="accordion-header">
+                        <a class="" href="./contact.html">
+                            Contact
+                        </a>
+                    </h6>
+                </div>
+
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Blogs
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="subMenu">
+                                <li class="subLi"><a href="">Blog Single</a></li><br>
+                                <li class="subLi"><a href="">Blog Grid</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </ul>
+    </header>
+
+    <main class="about">
+        <section class="sectionHeaderGradinent">
+            <h3>
+                About Us
+            </h3>
+            <div class="pagination">
+                <h6>
+                    Home <i class="bi bi-chevron-right"></i> About US
+                </h6>
+            </div>
+        </section>
+
+        <section class="aboutUsMainSection">
+            <div class="aboutUsMainSectionImage" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <img src="./assets/image/page-images/about-image.png" alt="">
+            </div>
+            <div class="aboutUsMainSectionDescriptionSec">
+                <h6 class="mainTitleMan" data-aos="fade-up" data-aos-duration="1000">
+                    About Us
+                </h6>
+                <h2 class="titleMan"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    We Are The Leader <br>
+                    in Digital Marketing
+                </h2>
+                <div class="descriptionMan" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <p>Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium.</p><br>
+                </div>
+                <div class="descriptionMan" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <p>If a website accomplishes its goals and works well, then igood web design. This might mean different things for each website, but all good web design will have certain in common.</p>
+                </div>
+
+                <div class="buttonsMan">
+                    <div class="multipleManagers buttonMan" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="400">
+                        <div class="logo">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="descButton">
+                            <h6>Amazing Partners</h6>
+                            <p>Quis autem vel eum reprehenderit</p>
+                        </div>
+                    </div>
+                    <div class="easyToUse buttonMan" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="logo">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <div class="descButton">
+                            <h6>
+                                Finalize & Publish</h6>
+                            <p>Quis autem vel eum reprehenderit</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="aboutUsWhyChooseUs">
+
+            <div class="aboutUsWhyChooseUsDescriptionSec">
+                <h6 class="mainTitleCus" data-aos="fade-up" data-aos-duration="1000">
+                    Why Choose Us
+                </h6>
+                <h2 class="titleCus" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    We Provide Best Digital <br> Marketing Solutions
+                </h2>
+                <div class="descriptionCus" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <p>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning.</p>
+                </div>
+
+
+
+                <div class="buttonsWhyChooseUs">
+                    <div class="becomefaster" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="logo">
+                            <p>1</p>
+                        </div>
+                        <div class="logoDesc">
+                            <h6>Fast Working Process</h6>
+                            <p>
+                                Corporate headquarters is the part of a corporate structure that deals with important
+                            </p>
+                        </div>
+                    </div>
+                    <div class="becomefaster" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="logo">
+                            <p>2</p>
+                        </div>
+                        <div class="logoDesc">
+                            <h6>Dedicated Team</h6>
+                           <p>
+                            Corporate headquarters is the part of a corporate structure that deals with important
+                           </p>
+                        </div>
+                    </div>
+                    <div class="becomefaster" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="logo">
+                            <p>3</p>
+                        </div>
+                        <div class="logoDesc">
+                            <h6>24/7 Hours Support</h6>
+                            <p>
+                                Corporate headquarters is the part of a corporate structure that deals with important
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="custamizationtImage" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <img src="./assets/image/page-images/why-choose.png" alt="">
+            </div>
+            <div class="backLights">
+                <img class="blue" src="./assets/image/page-elements/shape1.svg" alt="">
+                <img class="red" src="./assets/image/page-elements/shape2.svg" alt="">
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="achivement">
+            <div class="achivementDescriptionSec">
+                <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2>Our Achievement</h2>
+                </div>
+                <div class="descriptionAbout" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                </div>
+            </div>
+            <div class="persentageSec">
+                <div class="satisfaction pers" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="backHalfCircle">
+                        <svg class="shape" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M47.1868 15.7745C42.7476 11.5909 36.9073 9.25816 30.9507 9.28958C24.9941 9.32099 19.4092 11.714 15.4245 15.942C11.4399 20.1701 9.38191 25.887 9.70335 31.835C10.0248 37.783 12.6993 43.4748 17.1386 47.6585L32.1627 31.7165L47.1868 15.7745Z"
+                                fill="#FF4E79"></path>
+                        </svg>
+                    </div>
+                    <div class="persentageMain">
+                        <div class="value">
+                            <h2 class="countUpElement counter " data-goal="100">0</h2>
+                            <span>%</span>
+                        </div>
+                        <p>Satisfaction</p>
+                    </div>
+                </div>
+
+                <div class="happyUsers pers" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="backHalfCircle"> <svg class="shape" width="48" height="48" viewBox="0 0 48 48"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M47.1868 15.7745C42.7476 11.5909 36.9073 9.25816 30.9507 9.28958C24.9941 9.32099 19.4092 11.714 15.4245 15.942C11.4399 20.1701 9.38191 25.887 9.70335 31.835C10.0248 37.783 12.6993 43.4748 17.1386 47.6585L32.1627 31.7165L47.1868 15.7745Z"
+                                fill="#FE8432"></path>
+                        </svg></div>
+                    <div class="persentageMain">
+                        <div class="value">
+                            <h2 class="countUpElement counter" data-goal="120">0</h2>
+                            <span>k</span>
+                        </div>
+                        <p>Happy Users</p>
+                    </div>
+                </div>
+                <div class="downloads pers" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                    <div class="backHalfCircle"> <svg class="shape" width="48" height="48" viewBox="0 0 48 48"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M47.1868 15.7745C42.7476 11.5909 36.9073 9.25816 30.9507 9.28958C24.9941 9.32099 19.4092 11.714 15.4245 15.942C11.4399 20.1701 9.38191 25.887 9.70335 31.835C10.0248 37.783 12.6993 43.4748 17.1386 47.6585L32.1627 31.7165L47.1868 15.7745Z"
+                                fill="#BA97FF"></path>
+                        </svg></div>
+                    <div class="persentageMain">
+                        <div class="value">
+                            <h2 class="countUpElement counter" data-goal="500">0</h2>
+                            <span>+</span>
+                        </div>
+                        <p>Project Done</p>
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="customerReviews testimonials section">
+            <div class="testimonialsDescription">
+                <div class="mainTitleCustomer mainT" data-aos="zoom-in" data-aos-duration="1000">
+                    <h6>Customer Reviews</h6>
+                </div>
+                <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2>Our Testimonials</h2>
+                </div>
+                <div class="descriptionCustomer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <p>Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium.</p>
+                </div>
+            </div>
+            <div class="carouselTestimonials">
+
+            </div>
+            <!-- Carousel elave edilecek -->
+            <!-- Diqqetle bax -->
+        </section>
+
+        <section class="team">
+            <div class="teamsDesc">
+                <div class="mainTitleBlogs mainT" data-aos="zoom-in" data-aos-duration="1000">
+                    <h6>Team</h6>
+                </div>
+                <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2>Meet Our Team</h2>
+                </div>
+                <div class="descriptionBlogs" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                </div>
+            </div>
+
+            <div class="teamCards">
+                <ul class="cards">
+                    <li class="userCards" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="cardImage liza userImg">
+                        </div>
+                        <div class="cardDesc">
+
+                            <div class="userInfo">
+                                <h4>
+                                    Liza Marko
+                                </h4>
+                                <p>Graphics Designer</p>
+                            </div>
+                            <div class="socialIcons">
+                                <div class="social fb"><i class="bi bi-facebook"></i></div>
+                                <div class="social tw"><i class="bi bi-twitter"></i></div>
+                                <div class="social in"><i class="bi bi-linkedin"></i></div>
+                            </div>
+                        
+                        </div>
+                    </li>
+                    <li class="userCards" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                        <div class="cardImage john userImg">
+                        </div>
+                        <div class="cardDesc">
+
+                            <div class="userInfo">
+                                <h4>
+                                    John Smith
+                                </h4>
+                                <p>Digital Marketer</p>
+                            </div>
+                            <div class="socialIcons">
+                                <div class="social fb"><i class="bi bi-facebook"></i></div>
+                                <div class="social tw"><i class="bi bi-twitter"></i></div>
+                                <div class="social in"><i class="bi bi-linkedin"></i></div>
+                            </div>
+                        
+                        </div>
+                    </li>
+                    <li class="userCards" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                        <div class="cardImage amion userImg">
+                        </div>
+                        <div class="cardDesc">
+
+                            <div class="userInfo">
+                                <h4>
+                                    Amion Doe
+                                </h4>
+                                <p>Web Developer</p>
+                            </div>
+                            <div class="socialIcons">
+                                <div class="social fb"><i class="bi bi-facebook"></i></div>
+                                <div class="social tw"><i class="bi bi-twitter"></i></div>
+                                <div class="social in"><i class="bi bi-linkedin"></i></div>
+                            </div>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="advertisament">
+
+            <div class="sponsor">
+
+            <img src="./assets/image/advertisament-sponsors/graygrids-logo.svg" alt="">
+            </div>
+            <div class="sponsor">
+                <img src="./assets/image/advertisament-sponsors/lineicons-logo.svg" alt="">
+            </div>
+            <div class="sponsor">
+                <img src="./assets/image/advertisament-sponsors/pagebulb-logo.svg" alt="">
+            </div>
+            <div class="sponsor">
+                <img src="./assets/image/advertisament-sponsors/uideck-logo.svg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
     
+
+
+
+
+    <footer class="aboutFooter">
+        <div class="footerInfo">
+            <img src="./assets/image/logo.svg" alt="" class="logo">
+            <p class="footerDesc">Making the world a better place through constructing elegant hierarchies.</p>
+            <p class="copyRight">© 2023 Blink. <br>
+                Designed and Developed by <a href="">GrayGrids</a></p>
+        </div>
+        <div class="solutions footerLists">
+            <ul>
+                <h5>Solutions</h5>
+
+                <div>
+                    <li class="solutionCat">Marketing</li>
+                    <li class="solutionCat">Analytics</li>
+                    <li class="solutionCat">Commerse</li>
+                    <li class="solutionCat">Insights</li>
+                </div>
+            </ul>
+        </div>
+        <div class="supports footerLists">
+            <ul>
+                <h5>Supports</h5>
+
+                <div>
+                    <li class="supportCat">Pricing</li>
+                    <li class="supportCat">Documentation</li>
+                    <li class="supportCat">Guides</li>
+                    <li class="supportCat">API Status</li>
+                </div>
+            </ul>
+        </div>
+        <div class="subscribe">
+
+            <form action="" method="post">
+                <div class="subscribeDescs">
+                    <h5>Subscribe</h5>
+                    <p class="subscribeDesc">
+                        Subscribe to our newsletter for the latest updates
+                    </p>
+                </div>
+                <label for="">
+                    <input type="mail" placeholder="Email address" class="">
+                    <button class="btn"><i class="bi bi-envelope"></i></button>
+                </label>
+            </form>
+        </div>
+    </footer>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="./assets/js/aos-init.js"></script>
+    <script src="./assets/js/counUpMethodByMe.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/home/about.js"></script>
 </body>
+
 </html>

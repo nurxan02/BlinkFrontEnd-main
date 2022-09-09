@@ -15,7 +15,7 @@ const counters = document.querySelectorAll('.counter');
     
             if(c<target){
                 counter.innerText =`${Math.ceil(c+increase)}`;
-                setTimeout(updateCounter, 20)
+                setTimeout(updateCounter, 13)
                 console.log("salam");
             }else{
                 counter.innerText = target
