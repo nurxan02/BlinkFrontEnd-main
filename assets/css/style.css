@@ -399,7 +399,8 @@ main {
         width: 40%; }
         main .serviceWeProvide .serviceDescription .title h2 {
           text-align: center;
-          font-weight: 700; }
+          font-weight: 700;
+          font-family: 'roboto'; }
       main .serviceWeProvide .serviceDescription .descriptionServ {
         width: 80%; }
         main .serviceWeProvide .serviceDescription .descriptionServ p {
@@ -497,7 +498,8 @@ main {
         font-size: 15px; }
       main .management .managementDescriptionSec h2.titleMan {
         font-weight: 700;
-        font-size: 35px; }
+        font-size: 35px;
+        font-family: 'roboto'; }
       main .management .managementDescriptionSec .descriptionMan p {
         color: gray;
         font-family: 'roboto'; }
@@ -583,7 +585,8 @@ main {
       main .customization .customizationDescriptionSec h2.titleCus {
         font-weight: 700;
         font-size: 35px;
-        color: white; }
+        color: white;
+        font-family: 'roboto'; }
       main .customization .customizationDescriptionSec .descriptionCus p {
         color: white;
         font-family: 'roboto'; }
@@ -669,23 +672,24 @@ main {
           align-items: center;
           justify-content: center; } }
   main .pricing {
-    height: 130vh;
+    height: 120vh;
     background-color: #f4f7fa;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 100%; }
+    width: 100%;
+    padding: 50px; }
     main .pricing .pricingDesc {
       display: inherit;
       flex-direction: column;
       align-items: center;
-      height: 30%;
+      height: 22%;
       justify-content: space-around; }
       main .pricing .pricingDesc .mainTitlePrice {
         border: 2px solid #3080E3;
         border-radius: 20px;
-        width: 200px;
+        width: 130px;
         height: 35px;
         display: inherit;
         justify-content: center;
@@ -696,6 +700,7 @@ main {
       main .pricing .pricingDesc .title {
         width: 40%; }
         main .pricing .pricingDesc .title h2 {
+          font-family: 'roboto';
           text-align: center;
           font-weight: 700; }
       main .pricing .pricingDesc .descriptionPrice {
@@ -707,8 +712,8 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 85%;
-      height: 50%; }
+      width: 90%;
+      height: 65%; }
       main .pricing .pricingCards .pricingCard {
         width: 30%;
         height: 90%;
@@ -745,13 +750,43 @@ main {
               display: inline-block;
               position: absolute;
               top: 8px;
-              left: -15px; }
+              left: -15px;
+              color: gray; }
             main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .value {
               font-size: 40px;
               font-weight: 600; }
             main .pricing .pricingCards .pricingCard .cardPrice span.priceAll .month {
               color: gray;
               font-size: 14px; }
+        main .pricing .pricingCards .pricingCard .cardButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          width: 65%;
+          border-radius: 10px;
+          transition: .3s; }
+          main .pricing .pricingCards .pricingCard .cardButton .startFreeTrial {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px; }
+        main .pricing .pricingCards .pricingCard .cardButton.blue {
+          background-color: #3080E3; }
+          main .pricing .pricingCards .pricingCard .cardButton.blue:hover {
+            background-color: #fd723b; }
+        main .pricing .pricingCards .pricingCard .cardButton.orange {
+          background-color: #fd723b; }
+          main .pricing .pricingCards .pricingCard .cardButton.orange:hover {
+            background-color: #3080E3; }
+        main .pricing .pricingCards .pricingCard .cardButton.yellow {
+          background-color: #3080E3; }
+          main .pricing .pricingCards .pricingCard .cardButton.yellow:hover {
+            background-color: #fd723b; }
+        main .pricing .pricingCards .pricingCard .cardExplain {
+          color: gray;
+          text-align: center;
+          font-size: 14px; }
       main .pricing .pricingCards .pricingCard.starterCard .starterCardTitle {
         border-color: #3080E3; }
         main .pricing .pricingCards .pricingCard.starterCard .starterCardTitle h6 {
@@ -761,6 +796,440 @@ main {
         main .pricing .pricingCards .pricingCard.exclusiveCard .exclusiveCardTitle h6 {
           color: #fd723b; }
       main .pricing .pricingCards .pricingCard.premiumCard .premiumCardTitle {
-        border-color: #ffa842; }
+        border-color: #3080E3; }
         main .pricing .pricingCards .pricingCard.premiumCard .premiumCardTitle h6 {
-          color: #ffa842; }
+          color: #3080E3; }
+  @media only screen and (max-width: 996px) {
+    main .pricing {
+      padding: 10px;
+      height: 230vh;
+      justify-content: space-evenly; }
+      main .pricing .pricingDesc {
+        height: 20%; }
+        main .pricing .pricingDesc .title {
+          width: 70%; }
+      main .pricing .pricingCards {
+        width: 100%;
+        height: 80%;
+        flex-direction: column; }
+        main .pricing .pricingCards .pricingCard {
+          width: 95%;
+          height: 100%;
+          margin-bottom: 20px; } }
+  main .about {
+    height: 65vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 20px; }
+    main .about .aboutDescriptionSec {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 40%;
+      justify-content: space-around; }
+      main .about .aboutDescriptionSec .mainTitleAbout {
+        border: 2px solid #3080E3;
+        border-radius: 20px;
+        width: 130px;
+        height: 35px;
+        display: inherit;
+        justify-content: center;
+        align-items: center; }
+        main .about .aboutDescriptionSec .mainTitleAbout h6 {
+          color: #3080E3;
+          margin: 0; }
+      main .about .aboutDescriptionSec .title h2 {
+        text-align: center;
+        font-weight: 700; }
+      main .about .aboutDescriptionSec .descriptionAbout {
+        width: 80%; }
+        main .about .aboutDescriptionSec .descriptionAbout p {
+          text-align: center;
+          color: gray; }
+    main .about .persentageSec {
+      display: flex;
+      justify-content: space-evenly;
+      width: 75%; }
+      main .about .persentageSec .pers {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2; }
+        main .about .persentageSec .pers .persentageMain {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column; }
+          main .about .persentageSec .pers .persentageMain .value {
+            display: flex;
+            align-items: center; }
+            main .about .persentageSec .pers .persentageMain .value h2 {
+              font-weight: 700;
+              margin: 0; }
+            main .about .persentageSec .pers .persentageMain .value span {
+              font-weight: 700;
+              font-size: 30px; }
+          main .about .persentageSec .pers .persentageMain p {
+            position: relative;
+            z-index: 2;
+            color: gray;
+            font-size: 14px; }
+        main .about .persentageSec .pers .backHalfCircle {
+          position: absolute;
+          z-index: 1;
+          top: -15px;
+          left: -20px; }
+  @media only screen and (max-width: 996px) {
+    main .about {
+      height: 100vh; }
+      main .about .persentageSec {
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly; } }
+  main .customerReviews {
+    height: 100vh;
+    background-color: #f4f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 20px; }
+    main .customerReviews .testimonialsDescription {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 30%; }
+      main .customerReviews .testimonialsDescription .mainTitleCustomer {
+        border: 2px solid #3080E3;
+        border-radius: 20px;
+        width: 200px;
+        height: 35px;
+        display: inherit;
+        justify-content: center;
+        align-items: center; }
+        main .customerReviews .testimonialsDescription .mainTitleCustomer h6 {
+          color: #3080E3;
+          margin: 0; }
+      main .customerReviews .testimonialsDescription .title {
+        width: 40%; }
+        main .customerReviews .testimonialsDescription .title h2 {
+          text-align: center;
+          font-weight: 700;
+          font-family: 'roboto'; }
+      main .customerReviews .testimonialsDescription .descriptionCustomer {
+        width: 90%; }
+        main .customerReviews .testimonialsDescription .descriptionCustomer p {
+          text-align: center;
+          color: gray; }
+    main .customerReviews .carouselTestimonials {
+      height: 50%; }
+  main .blogs {
+    height: 150vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 20px; }
+    main .blogs .blogsDesc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 20%; }
+      main .blogs .blogsDesc .mainTitleBlogs {
+        border: 2px solid #3080E3;
+        border-radius: 20px;
+        width: 100px;
+        height: 35px;
+        display: inherit;
+        justify-content: center;
+        align-items: center; }
+        main .blogs .blogsDesc .mainTitleBlogs h6 {
+          color: #3080E3;
+          margin: 0; }
+      main .blogs .blogsDesc .title {
+        width: 40%; }
+        main .blogs .blogsDesc .title h2 {
+          text-align: center;
+          font-weight: 700;
+          font-family: 'roboto'; }
+      main .blogs .blogsDesc .descriptionBlogs {
+        width: 90%; }
+        main .blogs .blogsDesc .descriptionBlogs p {
+          text-align: center;
+          color: gray; }
+    main .blogs .blogCards {
+      width: 100%;
+      height: 50%; }
+      main .blogs .blogCards ul.cards {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        width: 100%; }
+        main .blogs .blogCards ul.cards li.blogcards {
+          height: 90%;
+          width: 30%;
+          align-items: center;
+          display: inherit;
+          flex-direction: column;
+          padding: 15px;
+          border-radius: 20px;
+          box-shadow: 0px 0px 20px -12px gray; }
+          main .blogs .blogCards ul.cards li.blogcards .cardImage {
+            width: 100%;
+            height: 50%;
+            transition: .3s;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            main .blogs .blogCards ul.cards li.blogcards .cardImage img {
+              transform: scale(1.22);
+              border-radius: 15px;
+              transition: .3s; }
+          main .blogs .blogCards ul.cards li.blogcards:hover .cardImage img {
+            transform: scale(1.3); }
+          main .blogs .blogCards ul.cards li.blogcards .cardDesc {
+            padding: 15px;
+            height: 55%;
+            display: inherit;
+            flex-direction: column;
+            justify-content: space-evenly; }
+            main .blogs .blogCards ul.cards li.blogcards .cardDesc small.cardCategory {
+              font-weight: 500;
+              font-size: 13px;
+              font-family: 'roboto';
+              color: #3080E3; }
+            main .blogs .blogCards ul.cards li.blogcards .cardDesc h4 {
+              font-size: 18px;
+              font-family: 'roboto';
+              transition: .3s;
+              cursor: pointer; }
+              main .blogs .blogCards ul.cards li.blogcards .cardDesc h4:hover {
+                color: #3080E3; }
+            main .blogs .blogCards ul.cards li.blogcards .cardDesc p {
+              color: gray;
+              font-size: 14px; }
+            main .blogs .blogCards ul.cards li.blogcards .cardDesc a.readME {
+              text-decoration: none;
+              color: gray;
+              font-weight: 500;
+              font-size: 15px;
+              transition: .3s; }
+              main .blogs .blogCards ul.cards li.blogcards .cardDesc a.readME:hover {
+                color: #3080E3;
+                transform: translateX(10px) scale(1.05); }
+    main .blogs .backgroundGetStarted {
+      width: 90%;
+      height: 20%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 50px 0px 50px;
+      background-color: #3080E3;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0px 0px 20px -5px #3080E3; }
+      main .blogs .backgroundGetStarted img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1; }
+      main .blogs .backgroundGetStarted h3 {
+        color: white; }
+      main .blogs .backgroundGetStarted .gettingStartedButton {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        border-radius: 10px;
+        width: 120px;
+        height: 50px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2; }
+        main .blogs .backgroundGetStarted .gettingStartedButton a {
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 500;
+          color: black; }
+        main .blogs .backgroundGetStarted .gettingStartedButton:hover {
+          background-color: #fd723b; }
+          main .blogs .backgroundGetStarted .gettingStartedButton:hover a {
+            color: white; }
+  @media only screen and (max-width: 996px) {
+    main .blogs {
+      height: 250vh;
+      padding: 0px 10px 0px 10px;
+      justify-content: space-around; }
+      main .blogs .blogCards ul.cards {
+        flex-direction: column; }
+        main .blogs .blogCards ul.cards li.blogcards {
+          width: 100%;
+          margin-bottom: 20px; }
+      main .blogs .blogsDesc {
+        height: 10%; }
+        main .blogs .blogsDesc .title {
+          width: 80%; }
+      main .blogs .backgroundGetStarted {
+        height: 6%;
+        flex-direction: column;
+        z-index: 0;
+        justify-content: center; }
+        main .blogs .backgroundGetStarted img {
+          height: 30%;
+          z-index: 1; }
+        main .blogs .backgroundGetStarted h3 {
+          font-size: 18px;
+          text-align: center; }
+        main .blogs .backgroundGetStarted .gettingStartedButton {
+          position: relative;
+          z-index: 2; } }
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 45vh;
+  justify-content: space-between;
+  padding: 0px 100px 0px 100px; }
+  footer .footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 25%;
+    height: 70%; }
+    footer .footerInfo img.logo {
+      height: 35px; }
+    footer .footerInfo p.footerDesc {
+      color: gray;
+      font-size: 15px; }
+    footer .footerInfo p.copyRight {
+      color: gray;
+      font-size: 15px; }
+      footer .footerInfo p.copyRight a {
+        color: #3080E3;
+        text-decoration: none;
+        transition: .3s; }
+        footer .footerInfo p.copyRight a:hover {
+          color: #fd723b; }
+  footer .footerLists {
+    height: 100%; }
+    footer .footerLists ul {
+      height: 65%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      footer .footerLists ul h5 {
+        font-size: 18px;
+        font-weight: 600; }
+      footer .footerLists ul div {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: space-evenly; }
+        footer .footerLists ul div li {
+          color: gray;
+          font-size: 15px;
+          font-family: 'roboto';
+          transition: .3s;
+          cursor: pointer; }
+          footer .footerLists ul div li:hover {
+            color: #3080E3; }
+  footer .subscribe {
+    width: 30%;
+    height: 65%; }
+    footer .subscribe form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-top: 5px;
+      height: 80%;
+      justify-content: space-between;
+      width: 80%; }
+      footer .subscribe form .subscribeDescs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%; }
+        footer .subscribe form .subscribeDescs h5 {
+          font-size: 18px;
+          font-weight: 600; }
+        footer .subscribe form .subscribeDescs p {
+          color: gray;
+          font-size: 14px;
+          white-space: nowrap; }
+      footer .subscribe form label {
+        position: relative; }
+        footer .subscribe form label input {
+          width: 100%;
+          height: 60px;
+          border-radius: 10px;
+          border-color: #e2e2e2;
+          border-style: solid;
+          border-width: 1px;
+          padding-left: 20px;
+          transition: .3s; }
+          footer .subscribe form label input:focus-visible {
+            border-width: 1px !important;
+            border-color: #3080E3 !important; }
+          footer .subscribe form label input:focus {
+            border: none;
+            border-color: #3080E3; }
+          footer .subscribe form label input:hover {
+            border-color: #3080E3; }
+        footer .subscribe form label button {
+          position: absolute;
+          background-color: #3080E3;
+          color: white;
+          height: 50px;
+          width: 50px;
+          right: 5px;
+          top: 5px; }
+          footer .subscribe form label button:hover {
+            background-color: #fd723b;
+            color: white;
+            border-color: #fd723b; }
+          footer .subscribe form label button i {
+            font-size: 18px; }
+
+@media only screen and (max-width: 996px) {
+  footer {
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    align-items: center;
+    height: 100vh;
+    border: 1px solid black; }
+    footer .footerInfo {
+      width: 100%;
+      align-items: center; }
+      footer .footerInfo p.footerDesc {
+        text-align: center; }
+      footer .footerInfo p.copyRight {
+        text-align: center; }
+    footer .footerLists {
+      height: 100%; }
+      footer .footerLists h5 {
+        text-align: center; }
+      footer .footerLists ul {
+        padding: 0; }
+        footer .footerLists ul div {
+          align-items: center;
+          height: 100%;
+          justify-content: space-between; }
+          footer .footerLists ul div li {
+            font-size: 18px; } }

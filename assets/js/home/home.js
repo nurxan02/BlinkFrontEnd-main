@@ -1,34 +1,62 @@
 //Hi my home.js file 
+'use strict'
 
 //Scroll Navbar and buttons Functions start
-window.onscroll = function() {scrollFunction()};
+
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.querySelector('header').style.background = "white";
     document.querySelector(".signUpButton").style.background = "#3080E3"
     document.querySelector(".signUpButton").style.color = "white"
-    document.querySelector(".signInButton").style.color = "black" 
-    $(".signUpButton").hover(function(){
-        $(this).css("background", "#fd723b");
+    document.querySelector(".signInButton").style.color = "black"
+    document.querySelector(".hello").style.boxShadow = "0px 20px 30px -40px gray"
+    $(".signUpButton").hover(function () {
+      $(this).css("background", "#fd723b");
     },
-    function(){
-        $(this).css({background: "#3080E3",color:"white"});
-    });
-  } else {
-    document.querySelector(".hello").style.background = "none";
-    document.querySelector(".signUpButton").style.background = "white"
-    document.querySelector(".signUpButton").style.color = "black"
-    document.querySelector(".signInButton").style.color = "white"
-    $(".signUpButton").hover(function(){
-        $(this).css({background: "#fd723b", color: "white"});
-    },
-    function(){
-        $(this).css({background: "white", color: "black"});
-    });
+    function () {
+      $(this).css({
+        background: "#3080E3",
+        color: "white"
+        });
+      });
+    } else {
+      document.querySelector(".hello").style.background = "none";
+      document.querySelector(".signUpButton").style.background = "white"
+      document.querySelector(".signUpButton").style.color = "black"
+      document.querySelector(".signInButton").style.color = "white"
+      document.querySelector(".hello").style.boxShadow = "0px 0px 0px 0px"
+      $(".signUpButton").hover(function () {
+        $(this).css({
+          background: "#fd723b",
+          color: "white"
+        });
+      },
+      function () {
+        $(this).css({
+          background: "white",
+          color: "black"
+        });
+      });
+      
+    }
     
   }
-}
-//Scroll Navbar and buttons Functions end
+
+  window.onscroll = function () {
+    scrollFunction()
+    var scrollUp = document.querySelector(".scrollUpButton");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        scrollUp.style.display = "flex";
+    } else {
+        scrollUp.style.display = "none";
+    }
+    scrollUp.addEventListener("click", function () {
+        window.scrollTo({
+          top:0
+        })
+    })
+  };
+//Scroll-top & Navbar & buttons Functions end
 
 //Burger Menu start
 $("ul.navListBurger").fadeOut(0.1);
@@ -37,8 +65,21 @@ $('.clickBurger').click(function () {
 });
 //Burger Menu end
 
+//Carousel start
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: false,
+  items: 2,
+  responsive: {
+      600: {
+          items: 1,
+      },
+      1000: {
+          items: 2,
+      }
+  }
+});
 
-
-
-
+//Carousel end
 
