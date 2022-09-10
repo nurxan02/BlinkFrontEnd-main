@@ -45,7 +45,7 @@ $ copy and go this page then install library .rar: https://owlcarousel2.github.i
 ## Responsive Devices
 
 - Mobile Devices : Iphone XR and Iphone 12 Pro
-- Desktop : 1440px x 800px (Adaptive for Macbook Pro 13" view-port)
+- Desktop : 1440px x 800px  and more (Fully Adaptive for Macbook Pro 13" view-port)
 
 ##
 
