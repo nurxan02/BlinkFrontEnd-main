@@ -1,15 +1,14 @@
 @mixin breakPoint($breakPointValue: 600px) {
-    @media only screen and (max-width: $breakPointValue) {
-
-        @content;
-    }
-}
-@mixin miniSectionDefault(){
-    height: 90vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: white;
+  @media only screen and (max-width: $breakPointValue) {
     @content;
+  }
+}
+@mixin miniSectionDefault() {
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  @content;
 }

@@ -1,65 +1,68 @@
-'use strict'
+"use strict";
 
 //Scroll Navbar and buttons Functions start
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.querySelector('header').style.background = "white";
-    document.querySelector(".signUpButton").style.background = "#3080E3"
-    document.querySelector(".signUpButton").style.color = "white"
-    document.querySelector(".signInButton").style.color = "black"
-    document.querySelector(".hello").style.boxShadow = "0px 20px 30px -40px gray"
-    $(".signUpButton").hover(function () {
-      $(this).css("background", "#fd723b");
-    },
-    function () {
-      $(this).css({
-        background: "#3080E3",
-        color: "white"
+    document.querySelector("header").style.background = "white";
+    document.querySelector(".signUpButton").style.background = "#3080E3";
+    document.querySelector(".signUpButton").style.color = "white";
+    document.querySelector(".signInButton").style.color = "black";
+    document.querySelector(".hello").style.boxShadow =
+      "0px 20px 30px -40px gray";
+    $(".signUpButton").hover(
+      function () {
+        $(this).css("background", "#fd723b");
+      },
+      function () {
+        $(this).css({
+          background: "#3080E3",
+          color: "white",
         });
-      });
-    } else {
-      document.querySelector(".hello").style.background = "none";
-      document.querySelector(".signUpButton").style.background = "white"
-      document.querySelector(".signUpButton").style.color = "black"
-      document.querySelector(".signInButton").style.color = "white"
-      document.querySelector(".hello").style.boxShadow = "0px 0px 0px 0px"
-      $(".signUpButton").hover(function () {
+      }
+    );
+  } else {
+    document.querySelector(".hello").style.background = "none";
+    document.querySelector(".signUpButton").style.background = "white";
+    document.querySelector(".signUpButton").style.color = "black";
+    document.querySelector(".signInButton").style.color = "white";
+    document.querySelector(".hello").style.boxShadow = "0px 0px 0px 0px";
+    $(".signUpButton").hover(
+      function () {
         $(this).css({
           background: "#fd723b",
-          color: "white"
+          color: "white",
         });
       },
       function () {
         $(this).css({
           background: "white",
-          color: "black"
+          color: "black",
         });
-      });
-      
-    }
-    
+      }
+    );
   }
+}
 
-  window.onscroll = function () {
-    scrollFunction()
-    var scrollUp = document.querySelector(".scrollUpButton");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        scrollUp.style.opacity = "100";
-    } else {
-        scrollUp.style.opacity = "0";
-    }
-    scrollUp.addEventListener("click", function () {
-        window.scrollTo({
-          top:0
-        })
-    })
-  };
+window.onscroll = function () {
+  scrollFunction();
+  var scrollUp = document.querySelector(".scrollUpButton");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    scrollUp.style.opacity = "100";
+  } else {
+    scrollUp.style.opacity = "0";
+  }
+  scrollUp.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+    });
+  });
+};
 //Scroll-top & Navbar & buttons Functions end
 
 //Burger Menu start
 $("ul.navListBurger").fadeOut(0.1);
-$('.clickBurger').click(function () {
+$(".clickBurger").click(function () {
   $("ul.navListBurger").fadeToggle(100);
 });
 //Burger Menu end
@@ -71,17 +74,16 @@ $(".owl-carousel").owlCarousel({
   nav: false,
   items: 2,
   responsive: {
-    0:{
-      items:1,
+    0: {
+      items: 1,
     },
-      600: {
-          items: 1,
-      },
-      1000: {
-          items: 2,
-      }
-  }
+    600: {
+      items: 1,
+    },
+    1000: {
+      items: 2,
+    },
+  },
 });
 
 //Carousel end
-
