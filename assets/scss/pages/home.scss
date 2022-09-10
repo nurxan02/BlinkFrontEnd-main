@@ -1612,6 +1612,11 @@ main {
               transition: 0.3s;
             }
           }
+          .blogImg {
+            img {
+              width: 100%;
+            }
+          }
 
           &:hover {
             .cardImage {
