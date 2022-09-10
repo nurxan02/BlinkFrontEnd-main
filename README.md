@@ -4,6 +4,11 @@ You are welcome! Please Read this Documentation and then run project or edit pro
 ## Installation
 Please install all libraries and plug-ins before run and editing!!!
 
+You must install "Node.Js" LTS (Long Time Support) version for use 'npm' installations
+
+[**Click Here and download "Node.Js" for your computer**](https://nodejs.org/en/download/)
+
+
 ```bash
 # installation SASS
 $ npm install sass
