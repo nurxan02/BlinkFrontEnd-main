@@ -1,7 +1,6 @@
 .bubbles {
     position: absolute;
     height: 90vh;
-
     .orangeBubble {
         background-color: $primary-orange;
         height: 350px;
@@ -11,7 +10,6 @@
         z-index: -1;
         transform: translate(-50%, -50%);
     }
-
     .blueBubble {
         width: 1000px;
         height: 1000px;
@@ -21,31 +19,25 @@
         z-index: -1;
         overflow-x: hidden;
         transform: translate(80%, -10%);
-
     }
-
     .pinkBubble {
         background-color: $primary-pink;
         border-radius: 50%;
         position: absolute;
         z-index: -2;
-
     }
-
     .pinkBubble.pink1 {
         height: 110px;
         width: 110px;
         top: 170px;
         left: 600px;
     }
-
     .pinkBubble.mini1 {
         height: 50px;
         width: 50px;
         top: 370px;
         left: 40px;
     }
-
     .pinkBubble.pink2 {
         height: 150px;
         width: 150px;
@@ -53,9 +45,7 @@
         left: 700px;
         z-index: 2;
     }
-
 }
-
 .scrollUpButton {
     display: flex;
     position: fixed;
@@ -69,13 +59,9 @@
     transition: .3s;
     border: none;
     z-index: 9999;
-
-
-
     i {
         color: white;
     }
-
     &:hover {
         background-color: $primary-orange;
         transform: translateY(-5px);
@@ -87,7 +73,6 @@
         right: 20px;
     }
 }
-
 header {
     height: 100px;
     display: flex;
@@ -99,28 +84,20 @@ header {
     z-index: 3;
     top: 0;
     transition: .3s;
-    // box-shadow: 0px 20px 30px -40px gray;
-
-
-
     .navLogo {
         height: 100%;
         width: 10%;
         display: inherit;
         align-items: center;
-
         img {
             height: 35%;
         }
     }
-
     nav {
         display: inherit;
         align-items: center;
         width: 30%;
         height: 100%;
-
-
         .navList {
             display: inherit;
             align-items: center;
@@ -131,10 +108,8 @@ header {
             width: 100%;
             height: 100%;
             margin-left: 21%;
-
             li.home {
                 position: relative;
-
                 ul {
                     transform: translateY(-20px);
                     opacity: 0;
@@ -150,23 +125,18 @@ header {
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-
                     li {
                         a {
-
                             color: gray;
                             font-size: 14px;
                             font-weight: 500;
                             text-decoration: none;
-
                             &:hover {
                                 color: $primary-blue;
                             }
                         }
                     }
-
                 }
-
                 &:hover {
                     ul {
                         height: 100px;
@@ -175,10 +145,8 @@ header {
                     }
                 }
             }
-
             li.Pages {
                 position: relative;
-
                 ul {
                     transform: translateY(-120px);
                     opacity: 0;
@@ -194,10 +162,8 @@ header {
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-
                     li {
                         a {
-
                             color: gray;
                             font-size: 14px;
                             font-weight: 500;
@@ -208,10 +174,7 @@ header {
                             }
                         }
                     }
-
-
                 }
-
                 &:hover {
                     ul {
                         height: 350px;
@@ -220,10 +183,8 @@ header {
                     }
                 }
             }
-
             li.Blog {
                 position: relative;
-
                 ul {
                     transform: translateY(-20px);
                     opacity: 0;
@@ -239,7 +200,6 @@ header {
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-
                     li {
                         a {
 
@@ -253,9 +213,7 @@ header {
                             }
                         }
                     }
-
                 }
-
                 &:hover {
                     ul {
                         height: 100px;
@@ -264,7 +222,6 @@ header {
                     }
                 }
             }
-
             li {
                 height: 100%;
                 display: inherit;
