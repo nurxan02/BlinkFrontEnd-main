@@ -1,4 +1,3 @@
-
 .scrollUpButton {
     display: flex;
     position: fixed;
@@ -24,12 +23,14 @@
         transform: translateY(-5px);
     }
 }
-@include breakPoint(996px){
-    .scrollUpButton{
+
+@include breakPoint(996px) {
+    .scrollUpButton {
         bottom: 25px;
         right: 20px;
     }
 }
+
 //about header start
 header.helloAbout {
     height: 100px;
@@ -37,12 +38,13 @@ header.helloAbout {
     justify-content: space-between;
     align-items: center;
     padding: 0px 5% 0px 5%;
-    background-color: white !important ;
+    background-color: white !important;
     position: sticky;
     z-index: 3;
     top: 0;
     transition: .3s;
     box-shadow: 0px 20px 30px -40px gray;
+
     .navLogo {
         height: 100%;
         width: 10%;
@@ -53,6 +55,7 @@ header.helloAbout {
             height: 35%;
         }
     }
+
     nav {
         display: inherit;
         align-items: center;
@@ -396,6 +399,7 @@ header.helloAbout {
     }
 
 }
+
 //contact header end
 
 //header BreakPoint Responsive start
@@ -425,27 +429,30 @@ header.helloAbout {
 //header BreakPoint Responsive end
 
 //contact main start
-main.about{
+main.about {
+
     //gradien start
-    .sectionHeaderGradinent{
+    .sectionHeaderGradinent {
         display: flex;
         width: 100%;
         height: 120px;
-        background: linear-gradient(-45deg,#fd723b,#3f8dec);
+        background: linear-gradient(-45deg, #fd723b, #3f8dec);
         padding: 0px 100px 0px 100px;
         align-items: center;
         justify-content: space-between;
-        h3{
+
+        h3 {
             color: white;
             font-size: 20px;
             font-weight: 600;
 
         }
-        .pagination{
-            h6{
+
+        .pagination {
+            h6 {
                 color: white;
-            font-size: 14px;
-            font-weight: 500;
+                font-size: 14px;
+                font-weight: 500;
 
 
             }
@@ -457,14 +464,15 @@ main.about{
 
     //gradient responsive start
 
-    @include breakPoint(996px){
-        .sectionHeaderGradinent{
+    @include breakPoint(996px) {
+        .sectionHeaderGradinent {
             flex-direction: column;
             justify-content: space-evenly;
             padding: 40px 0px 40px 0;
         }
 
     }
+
     //gradient responsive end
 
 
@@ -627,221 +635,226 @@ main.about{
         }
 
     }
+
     //about us section reponsive end
 
 
 
-        //Why Choose Us section start
-        .aboutUsWhyChooseUs {
+    //Why Choose Us section start
+    .aboutUsWhyChooseUs {
 
-            @include miniSectionDefault() {
-                background-color: #151515;
-                position: relative;
-                z-index: 1;
-                height: 130vh;
-    
+        @include miniSectionDefault() {
+            background-color: #151515;
+            position: relative;
+            z-index: 1;
+            height: 130vh;
+
+        }
+
+        .aboutUsWhyChooseUsDescriptionSec {
+            position: relative;
+            z-index: 2;
+            width: 40%;
+            display: inherit;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 60%;
+
+            h6.mainTitleCus {
+                color: $primary-blue;
+                font-size: 15px;
+
             }
-    
-            .aboutUsWhyChooseUsDescriptionSec {
-                position: relative;
-                z-index: 2;
-                width: 40%;
-                display: inherit;
-                flex-direction: column;
-                justify-content: space-evenly;
-                height: 60%;
-    
-                h6.mainTitleCus {
-                    color: $primary-blue;
-                    font-size: 15px;
-    
-                }
-    
-                h2.titleCus {
-                    font-weight: 700;
-                    font-size: 35px;
+
+            h2.titleCus {
+                font-weight: 700;
+                font-size: 35px;
+                color: white;
+                font-family: 'roboto';
+
+            }
+
+            .descriptionCus {
+                p {
                     color: white;
                     font-family: 'roboto';
-    
                 }
-    
-                .descriptionCus {
-                    p {
-                        color: white;
-                        font-family: 'roboto';
-                    }
-                }
-    
+            }
 
-                .buttonsWhyChooseUs{
-                    margin-top: 50px;
-                    height: 80%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    .becomefaster {
-                        width: 100%;
-                        display: flex;
-                        margin-bottom: 50px;
-        
-                        .logo {
-                            height: 60px;
-                            width: 60px;
-                            border-radius: 50%;
-                            background-color: $primary-blue;
-                            display: inherit;
-                            justify-content: center;
-                            align-items: center;
-                            margin-right: 20px;
-                            box-shadow: 0px 0px 25px -5px $primary-blue;
-                            transition: .3s;
-                            p {
-                                color: white;
-                                font-size: 20px;
-                                transition: .3s;
-                                margin: 0;
-                                font-family: 'roboto';
-        
-                            }
-        
-                            &:hover {
-                                background-color: $primary-orange;
-                               
-        
-                                i {
-        
-                                    color: $primary-blue;
-                                }
-                            }
-                        }
-        
-                        .logoDesc {
-                            font-family: 'poppins';
-        
-                            width: 85%;
-                            h6 {
-                                color: white;
-                                font-weight: 600;
-                                font-size: 20px;
 
-        
-                            }
-        
-                            p {
-                                display: inline-block;
-                                color: gray;
-                                font-size: 15px;
-                            }
-        
-                        }
-                    }
-                }
-            }
-    
-            .custamizationtImage {
-                width: 43%;
-    
-                img {
-                    width: 100%;
-                }
-            }
-    
-            .backLights {
-                position: absolute;
-                width: 100%;
-                overflow: hidden;
-                height: 90vh;
-    
-                img {
-                    position: absolute;
-    
-                    height: 100%;
-                    width: auto;
-                    z-index: -1;
-                }
-    
-                img.blue {
-                    left: -12%;
-                    top: 10%;
-    
-                }
-    
-                img.red {
-                    right: 20%;
-                    top: 10%;
-                }
-            }
-    
-    
-    
-    
-    
-    
-    
-        }
-    
-        // Why Choose Us section end
-    
-        // Why Choose Us section responsive start
-    
-        @include breakPoint(996px) {
-            .aboutUsWhyChooseUs {
+            .buttonsWhyChooseUs {
+                margin-top: 50px;
+                height: 80%;
+                display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                height: 180vh;
-    
-                .custamizationtImage {
+                justify-content: space-between;
+
+                .becomefaster {
                     width: 100%;
                     display: flex;
-                    justify-content: center;
-    
-                    img {
-                        width: 90%;
-                    }
-                }
-    
-                .aboutUsWhyChooseUsDescriptionSec {
-                    width: 100%;
-                    align-items: center;
-    
-                    h2.titleCus {
-                        width: 90%;
-                        text-align: center;
-                        font-size: 30px;
-                    }
-    
-                    .descriptionCus {
-                        width: 90%;
-    
-                        p {
-                            text-align: center;
-                        }
-                    }
-    
-                    .buttonsWhyChooseUs{
+                    margin-bottom: 50px;
+
+                    .logo {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        background-color: $primary-blue;
+                        display: inherit;
+                        justify-content: center;
                         align-items: center;
-                        height: 50%;
-                        .becomefaster {
-                            width: 90%;
-                            align-items: center;
-                            justify-content: center;
-                            margin-bottom: 10px !important;
+                        margin-right: 20px;
+                        box-shadow: 0px 0px 25px -5px $primary-blue;
+                        transition: .3s;
+
+                        p {
+                            color: white;
+                            font-size: 20px;
+                            transition: .3s;
+                            margin: 0;
+                            font-family: 'roboto';
+
+                        }
+
+                        &:hover {
+                            background-color: $primary-orange;
+
+
+                            i {
+
+                                color: $primary-blue;
+                            }
                         }
                     }
+
+                    .logoDesc {
+                        font-family: 'poppins';
+
+                        width: 85%;
+
+                        h6 {
+                            color: white;
+                            font-weight: 600;
+                            font-size: 20px;
+
+
+                        }
+
+                        p {
+                            display: inline-block;
+                            color: gray;
+                            font-size: 15px;
+                        }
+
+                    }
                 }
-    
             }
         }
-    
-        // Why Choose Us section responsive end
+
+        .custamizationtImage {
+            width: 43%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .backLights {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            height: 90vh;
+
+            img {
+                position: absolute;
+
+                height: 100%;
+                width: auto;
+                z-index: -1;
+            }
+
+            img.blue {
+                left: -12%;
+                top: 10%;
+
+            }
+
+            img.red {
+                right: 20%;
+                top: 10%;
+            }
+        }
 
 
 
 
 
 
-            //achivement section start 
+
+    }
+
+    // Why Choose Us section end
+
+    // Why Choose Us section responsive start
+
+    @include breakPoint(996px) {
+        .aboutUsWhyChooseUs {
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 180vh;
+
+            .custamizationtImage {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .aboutUsWhyChooseUsDescriptionSec {
+                width: 100%;
+                align-items: center;
+
+                h2.titleCus {
+                    width: 90%;
+                    text-align: center;
+                    font-size: 30px;
+                }
+
+                .descriptionCus {
+                    width: 90%;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                .buttonsWhyChooseUs {
+                    align-items: center;
+                    height: 50%;
+
+                    .becomefaster {
+                        width: 90%;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 10px !important;
+                    }
+                }
+            }
+
+        }
+    }
+
+    // Why Choose Us section responsive end
+
+
+
+
+
+
+    //achivement section start 
     .achivement {
         height: 60vh;
         background-color: white;
@@ -862,7 +875,7 @@ main.about{
             .title {
                 h2 {
                     text-align: center;
-                    font-weight: 700;
+                    font-weight: 600;
                     font-size: 35px;
                 }
 
@@ -949,81 +962,189 @@ main.about{
 
     //achivement section responsive end
 
+    //testimonial section start
 
+    .customerReviews {
 
-        //testimonial section start
+        height: 110vh;
+        background-color: #f4f7fa;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
 
-        .customerReviews {
-
-            height: 90vh;
-            background-color: #f4f7fa;
+        .testimonialsDescription {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
             align-items: center;
-            width: 100%;
-            padding: 20px;
-    
-            .testimonialsDescription {
-                display: flex;
-                flex-direction: column;
+            justify-content: space-around;
+            height: 30%;
+
+            .mainTitleCustomer {
+                border: 2px solid $primary-blue;
+                border-radius: 20px;
+                width: 200px;
+                height: 35px;
+                display: inherit;
+                justify-content: center;
                 align-items: center;
-                justify-content: space-around;
-                height: 30%;
-    
-                .mainTitleCustomer {
-                    border: 2px solid $primary-blue;
-                    border-radius: 20px;
-                    width: 200px;
-                    height: 35px;
-                    display: inherit;
-                    justify-content: center;
-                    align-items: center;
-    
-                    h6 {
-                        color: $primary-blue;
-                        margin: 0;
-                    }
-    
-    
+
+                h6 {
+                    color: $primary-blue;
+                    margin: 0;
                 }
-    
-                .title {
-                    width: 40%;
-    
-                    h2 {
-                        text-align: center;
-                        font-weight: 700;
-                        font-family: 'roboto';
-                    }
-                }
-    
-                .descriptionCustomer {
-                    width: 90%;
-    
-                    p {
-                        text-align: center;
-                        color: gray;
-                    }
-                }
-    
+
+
             }
-    
-            .carouselTestimonials {
-                height: 50%;
+
+            .title {
+                width: 40%;
+
+                h2 {
+                    text-align: center;
+                    font-weight: 700;
+                    font-family: 'roboto';
+
+                }
             }
-    
+
+            .descriptionCustomer {
+                width: 90%;
+
+                p {
+                    text-align: center;
+                    color: gray;
+                }
+            }
+
         }
-    
-        //testimonial section end
-    
-        //testimonials section responsive start
-    
-        //testimonials section responsive end
 
+        .testimonial-slider {
+            margin: 0;
 
+            .single-testimonial {
+                position: relative;
+                background-color: #fff;
+                transition: all 0.4s ease;
+                border-radius: 6px;
+                overflow: hidden;
+                padding: 70px 50px;
 
-            //team section start
+                .shape1 {
+                    top: 0;
+                    left: -30px;
+                    height: 90px;
+                    width: 90px;
+                }
+
+                .shape2 {
+                    position: absolute;
+                    right: 20px;
+                    bottom: 20px;
+                    width: auto;
+                }
+
+                .inner-content {
+                    position: relative;
+                    z-index: 0;
+                }
+
+                .qote-icon {
+                    position: absolute;
+                    font-size: 70px;
+                    top: 0;
+                    color: #3333331a;
+                    z-index: -1;
+                    opacity: 0.2;
+                    right: 0;
+                }
+
+                .text {
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 28px;
+                        color: #151515;
+                    }
+                }
+
+                .author {
+                    position: relative;
+                    padding-left: 70px;
+                    margin-top: 40px;
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+
+                    h4 {
+                        font-size: 17px;
+                        font-weight: 600;
+                        color: #151515;
+
+                        span {
+                            display: block;
+                            color: #3080E3;
+                            margin-top: 4px;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            .owl-dots {
+                .owl-dot {
+                    span {
+                        display: inline-block;
+                        height: 6px;
+                        width: 14px;
+                        background-color: #d0cccc;
+                        border-radius: 5px;
+                        border: none;
+                        margin: 0px 5px;
+                        transition: all 0.4s ease;
+                    }
+                }
+
+                button.owl-dot.active {
+                    span {
+                        width: 25px;
+                        background-color: #3080E3;
+                    }
+                }
+            }
+        }
+
+        @include breakPoint(996px) {
+            .single-testimonial {
+                padding: 50px 40px;
+
+                .text {
+                    h4 {
+                        font-size: 15px;
+                        line-height: 28px;
+                    }
+                }
+            }
+
+            .owl-dots {
+                bottom: 55px;
+            }
+
+        }
+    }
+
+    //testimonial section end
+
+    //team section start
 
     .team {
         height: 150vh;
@@ -1099,8 +1220,9 @@ main.about{
                     transition: .3s;
                     // box-shadow: 0px 0px 20px -12px gray;
                     border: 1px solid rgb(233, 233, 233);
-                    .userImg{
-                        background-size:cover ;
+
+                    .userImg {
+                        background-size: cover;
                         background-position: center;
                         background-repeat: no-repeat;
                         height: 80%;
@@ -1108,40 +1230,48 @@ main.about{
                         border-top-right-radius: 10px;
 
                     }
-                    .userImg.john{
+
+                    .userImg.john {
                         background-image: url(/assets/image/team-images/team2.jpeg);
 
                     }
-                    .userImg.liza{
+
+                    .userImg.liza {
                         background-image: url(/assets/image/team-images/team1.jpeg);
 
                     }
-                    .userImg.amion{
+
+                    .userImg.amion {
                         background-image: url(/assets/image/team-images/team3.jpeg);
 
                     }
-                    .cardDesc{
+
+                    .cardDesc {
                         height: 30%;
                         display: flex;
                         align-items: center;
                         width: 100%;
                         justify-content: space-between;
                         padding: 0px 20px 0px 20px;
-                        .userInfo{
-                            h4{
+
+                        .userInfo {
+                            h4 {
                                 font-size: 18px;
                                 font-weight: 600;
                             }
-                            p{
+
+                            p {
                                 font-size: 14px;
                                 color: gray;
                             }
                         }
-                        .socialIcons{
+
+                        .socialIcons {
                             display: flex;
                             width: 35%;
                             justify-content: space-around;
-                            .social{
+
+                            .social {
                                 height: 40px;
                                 width: 40px;
                                 border: 1px solid rgb(233, 233, 233);
@@ -1151,17 +1281,19 @@ main.about{
                                 align-items: center;
                                 transition: .2s;
                                 cursor: pointer;
-                                &:hover{
+
+                                &:hover {
                                     background-color: $primary-blue;
                                     color: white;
                                 }
-                                
+
                             }
                         }
                     }
-                    &:hover{
+
+                    &:hover {
                         box-shadow: 0px 15px 30px -28px rgb(158, 158, 158);
-                        
+
                     }
 
                 }
@@ -1181,12 +1313,22 @@ main.about{
             padding: 0px 10px 0px 10px;
             justify-content: space-around;
 
-            .teamsDesc{
+            .teamsDesc {
                 height: 30%;
                 justify-content: space-between;
+                margin-top: 40px;
+
+                .title {
+                    h2 {
+                        font-size: 30px;
+                    }
+                }
+
             }
+
             .teamCards {
                 height: 80%;
+
                 ul.cards {
                     flex-direction: column;
 
@@ -1212,7 +1354,7 @@ main.about{
 
     //team section responsive end
 
-    .advertisament{
+    .advertisament {
 
         background-color: #f4f7fa;
         width: 100%;
@@ -1221,27 +1363,28 @@ main.about{
         height: 30vh;
         align-items: center;
 
-        .sponsor{
-            img{
+        .sponsor {
+            img {
                 height: 100px;
                 transition: .3s;
-                &:hover{
+
+                &:hover {
                     transform: scale(1.05);
                 }
             }
         }
     }
-        
+
 
 
     //advertisament section start
 
-    @include breakPoint(996px){
-        .advertisament{
+    @include breakPoint(996px) {
+        .advertisament {
             flex-direction: column;
             height: 100vh;
 
-            .sponsor{
+            .sponsor {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -1270,6 +1413,7 @@ main.about{
 
 
 }
+
 //contact main end
 
 
@@ -1280,7 +1424,7 @@ footer.aboutFooter {
     height: 45vh;
     justify-content: space-between;
     padding: 100px 100px 0px 100px;
-    
+
 
     .footerInfo {
         display: flex;
@@ -1440,6 +1584,7 @@ footer.aboutFooter {
         }
     }
 }
+
 //footer end
 
 //footer responsive start
@@ -1520,9 +1665,11 @@ footer.aboutFooter {
                     }
 
                 }
-                label{
+
+                label {
                     width: 100%;
-                    input{
+
+                    input {
                         width: 100%;
                     }
                 }
@@ -1530,4 +1677,5 @@ footer.aboutFooter {
         }
     }
 }
+
 //footer responsive end

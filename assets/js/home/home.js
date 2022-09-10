@@ -1,4 +1,3 @@
-//Hi my home.js file 
 'use strict'
 
 //Scroll Navbar and buttons Functions start
@@ -72,6 +71,9 @@ $(".owl-carousel").owlCarousel({
   nav: false,
   items: 2,
   responsive: {
+    0:{
+      items:1,
+    },
       600: {
           items: 1,
       },
